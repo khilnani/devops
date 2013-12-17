@@ -16,7 +16,7 @@ This section contains scripts to setup CentOS 6.5 images in Virtual Box
 
 - Install Virtual Box from https://www.virtualbox.org/
 - Download the CentOS 6.5 i386 Disc 1 ISO from http://mirror.umd.edu/centos/6.5/isos/i386/CentOS-6.5-i386-bin-DVD1.iso
-- Setup a new VM in Virtual Box
+- Setup a new Linux/Redhat VM in Virtual Box
   - root password: vagrant
 - Execute `centos-vagrant-setup.sh` on the VM once CentOS is installed
 
