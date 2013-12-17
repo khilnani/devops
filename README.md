@@ -1,9 +1,9 @@
 devops
 =========
 
-All files are copyright their respective owners.
+All files are copyright their respective owners. My devops files are free to use provided you say thanks.
 
-My devops files are free to use provided you say thanks.
+Each directory has it's own Readme with additional details.
 
 - **centos/** - CentOS 6.5 setup scripts
   - Vagrant VM/Box/Package setup for VirtualBox CentOS image
