@@ -1,5 +1,4 @@
-
-## CentOS Setup Scripts
+## CentOS 6.5 Setup Scripts
 
 This section contains scripts to setup CentOS 6.5 images in Virtual Box
 
