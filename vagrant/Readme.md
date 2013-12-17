@@ -5,7 +5,7 @@
   - CentOS 6.5 i386 with VGA
   - Ubuntu 12 i386
 
-## Setup SSH
+## 'ssh/' - Setup SSH
 
 - Run `download-vagrant-ssh-keys.sh` to Download the Vagrant Public and Private key. Usually needed if you want to SSH in to Vagrant Box without using Vagrant - directly via ssh.
 - Run `install-vagrant-ssh-pub-key.sh` to install the Vagrant public key to a Guest VM's `.ssh/authorized_keys` file
