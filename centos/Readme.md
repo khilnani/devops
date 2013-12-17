@@ -27,11 +27,12 @@ This section contains scripts to setup CentOS 6.5 images in Virtual Box
 - Rename `package.box` to `NAME.box`
 - Init Vagrant with the box `vagrant init ID NAME.box`
 - Edit Vagrant File for GUI access if desired
-  ```
+
+```
   config.vm.provider "virtualbox" do |v|
     v.gui = true
   end
-  ```
+```
 - Start Vagrant `vagrant up`
 - If `vagrant up` hangs while waiting for VM to boot. 
   - Ctrl-C and try `vagrant ssh`
