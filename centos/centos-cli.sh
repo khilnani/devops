@@ -5,9 +5,7 @@
 ##############################################
 
 sed -i -e 's/ONBOOT=no/ONBOOT=yes/g' /etc/sysconfig/network-scripts/ifcfg-eth0
-
 sed -i -e 's/rhgb quiet/rhgb quiet vga=791/g' /etc/grub.conf
-
 /etc/rc.d/init.d/network start
 
 ##############################################
