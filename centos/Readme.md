@@ -6,6 +6,7 @@ This section contains scripts to setup CentOS 6.5 images in Virtual Box
 
 - Run `centos-core.sh`
 - Run `centos-tools.sh` for additional Develper packages
+- Run `install_chrome.sh` if CentOS was setup with a basic VGA driver' to install Google Chrome 28
 
 ## Vagrant VM
 
