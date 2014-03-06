@@ -14,3 +14,5 @@ Each directory has it's own Readme with additional details.
 - **ansible/**
   - Installer script fo Mac OS X and Linux/CentOS
   - *sample/* - Simple reference setup of an Ansible playbook with instructions
+- **automation/**
+  - PhantomJS based UI automation framework.
