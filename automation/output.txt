@@ -1,0 +1,69 @@
+[26/Jan/2014 22:24:47:298 -0500] - [SYSTEM] logger.setLogLevel() DEBUG
+[26/Jan/2014 22:24:47:299 -0500] - [INFO]   Useragent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.12 Safari/535.11
+[26/Jan/2014 22:24:47:299 -0500] - [INFO]   page.settings.resourceTimeout:10000
+[26/Jan/2014 22:24:47:299 -0500] - [INFO]   page.libraryPath:./lib
+[26/Jan/2014 22:24:47:299 -0500] - [DEBUG]  page.onNavigationRequested: true, main: true, type: Other, url: http://www.google.com/
+[26/Jan/2014 22:24:47:362 -0500] - [DEBUG]  page.onNavigationRequested: true, main: true, type: Other, url: https://www.google.com/
+[26/Jan/2014 22:24:47:363 -0500] - [INFO]     Response (#1, status 302"): http://www.google.com/
+[26/Jan/2014 22:24:47:516 -0500] - [EVENT]  URL: https://www.google.com/
+[26/Jan/2014 22:24:47:573 -0500] - [INFO]     Response (#2, status 200"): https://www.google.com/
+[26/Jan/2014 22:24:47:649 -0500] - [INFO]     Response (#4, status 200"): https://www.google.com/images/srpr/logo11w.png
+[26/Jan/2014 22:24:47:751 -0500] - [INFO]     Response (#3, status 200"): https://ssl.gstatic.com/gb/images/v1_53a1fa6a.png
+[26/Jan/2014 22:24:47:769 -0500] - [INFO]     Response (#5, status 200"): https://www.google.com/xjs/_/js/k=xjs.s.en_US.eYG7PyzNpLg.O/m=c,sb,cr,jp,jsa,elog,r,hsm,j,p,pcc,csi/am=OAYALAo/rt=j/d=1/sv=1/rs=AItRSTM8xEE9XQiFcFMUmu38AB6MThTMiw
+[26/Jan/2014 22:24:47:769 -0500] - [DEBUG]  Status: success
+[26/Jan/2014 22:24:47:770 -0500] - [EVENT]  ACTION: google, search on URL: https://www.google.com/
+[26/Jan/2014 22:24:47:771 -0500] - [INFO]   google: search()
+[26/Jan/2014 22:24:47:797 -0500] - [INFO]     PAGE console.log: google: Query: PhantomJS
+[26/Jan/2014 22:24:47:799 -0500] - [INFO]   Executed ACTION
+[26/Jan/2014 22:24:47:899 -0500] - [INFO]     Response (#8, status null"): data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D
+[26/Jan/2014 22:24:47:900 -0500] - [DEBUG]  page.onNavigationRequested: true, main: true, type: FormSubmitted, url: https://www.google.com/search?output=search&sclient=psy-ab&q=PhantomJS
+[26/Jan/2014 22:24:47:900 -0500] - [INFO]     Response (#7, status 200"): https://www.google.com/xjs/_/js/k=xjs.s.en_US.eYG7PyzNpLg.O/m=sy23,cdos,sy40,gf,vm,sy47,sy75,sy76,sy215,tbui,sy120,sy186,cfm,sy85,sy54,sy86,sy48,sy51,sy55,sy64,sy68,sy87,sy90,sy28,sy121,sy96,sy97,sy46,sy65,sy67,sy69,sy88,sy89,sy124,sy93,sy95,sy52,sy66,sy91,sy122,sy123,sy125,sy126,sy127,sy128,actn,abd,sy73,sy42,sy92,sy94,sy99,sy39,sy70,sy71,sy63,sy72,sy74,sy77,sy78,sy101,sy84,sy79,sy98,sy100,sy103,sy62,llc,foot,idck,ifl,sy198,sy200,lu,imap,sy202,m,me,sy165,sy164,sy177,sy166,em2,em3,em4,sy213,tnv,sy53,sy49,ttbcdr,sy129,adp,sy81,async,erh,sy104,hv,sy105,jsaleg,sy107,sy108,kp,lc,sf,sy180,sfa,sy111,sy112,sy113,sy110,sy109,sy114,sy116,sy117,tabs,tbpr,sy138,tr/am=OAYALAo/rt=j/d=0/sv=1/rs=AItRSTM8xEE9XQiFcFMUmu38AB6MThTMiw
+[26/Jan/2014 22:24:47:901 -0500] - [INFO]     Response (#6, status 200"): https://www.google.com/extern_chrome/6f31e418caa3d404.js?bav=on.2,or.r_qf.
+[26/Jan/2014 22:24:47:901 -0500] - [INFO]     Response (#9, status null"): https://www.google.com/textinputassistant/tia.png
+[26/Jan/2014 22:24:47:901 -0500] - [INFO]     Response (#10, status null"): https://www.gstatic.com/og/_/js/k=og.og.en_US.J3X614e2JWc.O/rt=j/m=sy19,sy20,sy21,sy22,sy23,d,ld,gl,sy25,is,sy24,id,nb,nw,sb,sd,p,vd,st,awd,ip,dp/rs=AItRSTOhdLHMiC4wWiFe8BHyoLg4Xe3aCg
+[26/Jan/2014 22:24:48:013 -0500] - [INFO]   google: Saved screenshot: search.png
+[26/Jan/2014 22:24:48:033 -0500] - [EVENT]  URL: https://www.google.com/search?output=search&sclient=psy-ab&q=PhantomJS
+[26/Jan/2014 22:24:48:389 -0500] - [INFO]     Response (#11, status 200"): https://www.google.com/search?output=search&sclient=psy-ab&q=PhantomJS
+[26/Jan/2014 22:24:48:389 -0500] - [INFO]     Response (#12, status null"): data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+[26/Jan/2014 22:24:48:424 -0500] - [INFO]     Response (#15, status null"): data:image/jpeg;base64,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
+[26/Jan/2014 22:24:48:437 -0500] - [INFO]     Response (#13, status 200"): https://www.google.com/images/nav_logo170.png
+[26/Jan/2014 22:24:48:521 -0500] - [INFO]     Response (#14, status 200"): https://www.google.com/images/nav_logo170_hr.png
+[26/Jan/2014 22:24:48:531 -0500] - [INFO]     Response (#16, status 200"): https://www.google.com/extern_chrome/6f31e418caa3d404.js?bav=on.2,or.r_qf.
+[26/Jan/2014 22:24:48:559 -0500] - [INFO]     Response (#18, status 200"): https://www.google.com/textinputassistant/tia.png
+[26/Jan/2014 22:24:48:582 -0500] - [INFO]     Response (#17, status 200"): https://www.google.com/xjs/_/js/k=xjs.s.en_US.eYG7PyzNpLg.O/m=sy23,cdos,sy40,gf,vm,sy47,sy75,sy76,sy215,tbui,sy120,sy186,cfm,sy85,sy54,sy86,sy48,sy51,sy55,sy64,sy68,sy87,sy90,sy28,sy121,sy96,sy97,sy46,sy65,sy67,sy69,sy88,sy89,sy124,sy93,sy95,sy52,sy66,sy91,sy122,sy123,sy125,sy126,sy127,sy128,actn,abd,sy140,wta,sy73,sy42,sy92,sy94,sy99,sy39,sy70,sy71,sy63,sy72,sy74,sy77,sy78,sy101,sy84,sy79,sy98,sy100,sy103,sy62,llc,aspn,foot,idck,sy198,sy200,lu,imap,sy202,m,me,sy165,sy164,sy177,sy166,em2,em3,em4,sy213,tnv,sy53,sy49,ttbcdr,sy111,sy112,sy113,adct,sy129,adp,sy81,async,crd,erh,sy104,hv,sy105,jsaleg,sy107,sy108,kp,lc,sy114,sy195,rmr,sf,sy180,sfa,sy110,sy109,sy116,sy117,tabs,tbpr,sy138,tr,sy223,vs/am=OAYALAo/rt=j/d=0/sv=1/rs=AItRSTM8xEE9XQiFcFMUmu38AB6MThTMiw
+[26/Jan/2014 22:24:48:582 -0500] - [DEBUG]  Status: success
+[26/Jan/2014 22:24:48:582 -0500] - [EVENT]  ACTION: google, results on URL: https://www.google.com/search?output=search&sclient=psy-ab&q=PhantomJS
+[26/Jan/2014 22:24:48:583 -0500] - [INFO]   google: results()
+[26/Jan/2014 22:24:48:593 -0500] - [INFO]     PAGE console.log: google: Navigating to: http://phantomjs.org/
+[26/Jan/2014 22:24:48:793 -0500] - [INFO]   google: Saved screenshot: results.png
+[26/Jan/2014 22:24:48:793 -0500] - [INFO]   Executed ACTION
+[26/Jan/2014 22:24:48:876 -0500] - [INFO]     Response (#19, status 204"): https://www.google.com/client_204?&atyp=i&biw=400&bih=300&ei=f9HlUoqZO6rKsQTE1oDoAg
+[26/Jan/2014 22:24:48:876 -0500] - [DEBUG]  page.onNavigationRequested: true, main: true, type: Other, url: http://phantomjs.org/
+[26/Jan/2014 22:24:48:901 -0500] - [INFO]     Response (#20, status 302"): http://phantomjs.org/
+[26/Jan/2014 22:24:48:999 -0500] - [EVENT]  URL: http://phantomjs.org/
+[26/Jan/2014 22:24:49:001 -0500] - [INFO]     Response (#21, status 200"): http://phantomjs.org/
+[26/Jan/2014 22:24:49:064 -0500] - [INFO]     Response (#22, status 200"): http://fonts.googleapis.com/css?family=Droid+Sans:400,700
+[26/Jan/2014 22:24:49:069 -0500] - [INFO]     Response (#23, status 200"): http://phantomjs.org/css/main.css
+[26/Jan/2014 22:24:49:106 -0500] - [INFO]     Response (#27, status 200"): http://phantomjs.org/img/icon-release.png
+[26/Jan/2014 22:24:49:129 -0500] - [INFO]     Response (#28, status 200"): http://phantomjs.org/img/icon-ml.png
+[26/Jan/2014 22:24:49:131 -0500] - [INFO]     Response (#24, status 200"): http://www.google-analytics.com/ga.js
+[26/Jan/2014 22:24:49:187 -0500] - [INFO]     Response (#29, status 302"): http://phantomjs.org/img/icon-bugs.png
+[26/Jan/2014 22:24:49:187 -0500] - [INFO]     Response (#26, status 200"): http://phantomjs.org/img/phantomjs-logo.png
+[26/Jan/2014 22:24:49:201 -0500] - [INFO]     Response (#30, status 200"): http://www.google-analytics.com/__utm.gif?utmwv=5.4.6&utms=1&utmn=1169530103&utmhn=phantomjs.org&utmcs=UTF-8&utmsr=1680x1050&utmvp=400x300&utmsc=32-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=PhantomJS%20%7C%20PhantomJS&utmhid=1311078201&utmr=-&utmp=%2F&utmht=1390793089184&utmac=UA-21665893-1&utmcc=__utma%3D205055825.501045330.1390793089.1390793089.1390793089.1%3B%2B__utmz%3D205055825.1390793089.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmu=q~
+[26/Jan/2014 22:24:49:224 -0500] - [INFO]     Response (#31, status 200"): http://phantomjs.org/img/icon-bugs.png
+[26/Jan/2014 22:24:49:530 -0500] - [INFO]     Response (#25, status 200"): https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png
+[26/Jan/2014 22:24:49:531 -0500] - [DEBUG]  Status: success
+[26/Jan/2014 22:24:49:531 -0500] - [EVENT]  ACTION: google, link on URL: http://phantomjs.org/
+[26/Jan/2014 22:24:49:532 -0500] - [INFO]   google: link()
+[26/Jan/2014 22:24:49:546 -0500] - [INFO]     PAGE console.log: Doc Link: http://phantomjs.org/documentation
+[26/Jan/2014 22:24:49:769 -0500] - [INFO]   google: Saved screenshot: link.png
+[26/Jan/2014 22:24:49:769 -0500] - [INFO]   Executed ACTION
+[26/Jan/2014 22:24:49:771 -0500] - [DEBUG]  page.onNavigationRequested: true, main: true, type: Other, url: http://phantomjs.org/documentation
+[26/Jan/2014 22:24:49:816 -0500] - [DEBUG]  page.onNavigationRequested: true, main: true, type: Other, url: http://phantomjs.org/documentation/
+[26/Jan/2014 22:24:49:816 -0500] - [INFO]     Response (#32, status 301"): http://phantomjs.org/documentation
+[26/Jan/2014 22:24:49:854 -0500] - [EVENT]  URL: http://phantomjs.org/documentation/
+[26/Jan/2014 22:24:49:858 -0500] - [INFO]     Response (#33, status 200"): http://phantomjs.org/documentation/
+[26/Jan/2014 22:24:49:878 -0500] - [DEBUG]  Status: success
+[26/Jan/2014 22:24:49:879 -0500] - [EVENT]  ACTION: google, docLink on URL: http://phantomjs.org/documentation/
+[26/Jan/2014 22:24:49:879 -0500] - [INFO]   google: docLink()
+[26/Jan/2014 22:24:50:035 -0500] - [INFO]   google: Saved screenshot: docLink.png
