@@ -1,0 +1,16 @@
+---
+- hosts: web
+  vars:
+    tmp_dir: /tmp
+  sudo: yes 
+  remote_user: vagrant
+  roles:
+    - common
+    - centos
+    - php
+    - mysql
+    - mongodb
+    - nodejs
+    - git
+    - httpd
+

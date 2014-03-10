@@ -1,0 +1,33 @@
+---
+- name: Install httpd
+  yum: name=httpd-2.2.15 state=present
+
+- name: Backup httpd.conf
+  shell: yes n | cp -i /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.`date +%Y%m%d-%H%M%S`
+
+- name: Install Hello World PHP script
+  template:
+    src={{ httpd_index }}
+    dest=/var/www/html/index.php 
+    mode=0664
+
+- name: Copy .htaccess
+  template:
+    src={{ httpd_htaccess }}
+    dest=/var/www/html/.htaccess
+    mode=644
+
+- name: Copy .htpasswd
+  template:
+    src={{ httpd_htpasswd }}
+    dest=/data/.htpasswd
+    mode=644
+
+- name: Disable firewall
+  service: name=iptables state=stopped enabled=no
+
+- name: Copy httpd.conf
+  copy: src={{ httpd_conf }} dest=/etc/httpd/conf/httpd.conf
+
+- name: Restart httpd
+  service: name=httpd state=restarted enabled=yes

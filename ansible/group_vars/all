@@ -1,0 +1,9 @@
+---
+git_config: .gitconfig
+git_credentials: .git-credentials
+
+php_ini: php.ini
+
+httpd_htaccess: .htaccess
+httpd_htpasswd: .htpasswd
+httpd_index: index.php

@@ -1,0 +1,19 @@
+---
+- name: Copy .gitconfig
+  copy: src={{ git_config }} dest=~/.gitconfig mode=0664
+- name: Copy .git-credentials
+  copy: src={{ git_credentials }} dest=~/.git-credentials mode=0664
+
+- name: Clone projects
+  git: repo=https://{{ git_token }}@github.com/{{ item.repo }} dest={{ item.dest }} update=yes
+  with_items: git_projects
+
+- name: Copy config for {{ item.dest }}
+  copy: src={{ item.src }} dest={{ item.dest }}
+  with_items: config_copy
+
+- name: Git shell for {{ item }}
+  shell: "{{ item }}"
+  with_items: git_shell
+  ignore_errors: True
+

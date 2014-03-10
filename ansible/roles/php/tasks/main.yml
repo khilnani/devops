@@ -1,0 +1,9 @@
+---
+- name: Install php
+  yum: name=php,php-mysql state=present
+- name: Backup php.ini
+  shell: yes n | cp -i /etc/php.ini /etc/php.ini.`date +%Y%m%d-%H%M%S`
+- name: Update php.ini
+  copy: src={{ php_ini }} dest=/etc/php.ini mode=0644
+  notify:
+    - Restart httpd

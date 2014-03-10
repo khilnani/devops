@@ -1,0 +1,12 @@
+---
+- name: Install php mongo driver
+  shell: pecl install mongo
+  ignore_errors: True
+- name: Copy mongodb repo for yum
+  template:
+    src=mongodb.repo
+    dest=/etc/yum.repos.d/mongodb.repo
+- name: Install mongodb
+  yum: name=mongo-10gen,mongo-10gen-server state=present
+- name: Restart mongod
+  service: name=mongod state=restarted enabled=yes
