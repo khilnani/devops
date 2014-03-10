@@ -8,7 +8,7 @@ Please change the remote user in `inventory` line `remote_user: vagrant`
 
 ## Prerequisites
 
-- ENsure Ansible 1.4 is installed
+- Ensure Ansible 1.4 is installed
 - Please review http://docs.ansible.com/playbooks_best_practices.html
 
 ## Specifics
