@@ -2,6 +2,9 @@
 git_config: .gitconfig
 git_credentials: .git-credentials
 
+git_id_rsa_pub: id_rsa.pub
+git_id_rsa: id_rsa
+
 php_ini: php.ini
 
 httpd_htaccess: .htaccess
