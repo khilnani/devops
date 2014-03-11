@@ -1,0 +1,32 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  config.vm.define "default" do |default|
+    default.vm.box = "centos-6.5"
+    default.vm.box_url = "https://dl.dropboxusercontent.com/u/26568959/VagrantBoxes/CentOS-6.5-i386.box"
+    default.vm.hostname = "default"
+#    default.vm.network "forwarded_port", guest: 22, host: 1234
+    default.vm.provision "ansible" do |ansible|
+      ansible.inventory_path = "./inventory"
+      ansible.playbook = "./playbook.yml"
+      ansible.sudo = true
+      ansible.verbose = 'vvvv'
+    end
+  end
+
+  config.vm.synced_folder "./", "/host_data"
+
+  # config.vm.provider :virtualbox do |vb|
+  #   # Don't boot with headless mode
+  #   vb.gui = true
+  #
+  #   # Use VBoxManage to customize the VM. For example to change memory:
+  #   vb.customize ["modifyvm", :id, "--memory", "1024"]
+  # end
+ 
+end

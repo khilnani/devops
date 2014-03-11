@@ -19,6 +19,7 @@ adduser nkhilnani
 # Install core software
 ##############################################
 
+yum -y install libselinux-python
 yum -y groupinstall "Development Tools"
 yum -y install man wget curl
 

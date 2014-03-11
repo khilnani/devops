@@ -3,6 +3,8 @@
   shell: cat /etc/*-release
 - name: Change SELinux Policy
   shell: echo 0 >/selinux/enforce
+- name: Install python-selinux
+  yum: name=libselinux-python state=latest
 - name: Update system
   yum: name=* state=latest
 - name: Update Python Setup Tools

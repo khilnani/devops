@@ -4,6 +4,9 @@
 - name: Copy .git-credentials
   copy: src={{ git_credentials }} dest=~/.git-credentials mode=0664
 
+- name: Append github key to knownhosts
+  shell: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+
 - name: Clone projects
   git: repo=https://{{ git_token }}@github.com/{{ item.repo }} dest={{ item.dest }} update=yes
   with_items: git_projects
