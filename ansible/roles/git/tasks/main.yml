@@ -1,22 +1,40 @@
 ---
+- name: Delete /data/git
+  shell: rm -rf /data/git
+
 - name: Copy .gitconfig
   copy: src={{ git_config }} dest=~/.gitconfig mode=0664
-- name: Copy .git-credentials
-  copy: src={{ git_credentials }} dest=~/.git-credentials mode=0664
+
+- name: Create ~/.ssh
+  file: state=directory mode=-0700 path=~/.ssh
+
+- name: Copy ssh pub key 
+  copy: src={{ git_id_rsa_pub }} dest=~/.ssh/id_rsa.pub mode=0600
+  when: git_id_rsa_pub is defined
+
+- name: Copy ssh pvt key 
+  copy: src={{ git_id_rsa }} dest=~/.ssh/id_rsa mode=0600
+  when: git_id_rsa is defined
 
 - name: Append github key to knownhosts
-  shell: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+  shell: ssh-keyscan -H github.com > ~/.ssh/known_hosts
+
+- name: Create /data/git dir
+  file: state=directory path=/data/git/
 
 - name: Clone projects
-  git: repo=https://{{ git_token }}@github.com/{{ item.repo }} dest={{ item.dest }} update=yes
+  git: repo={{ item.repo }} dest={{ item.dest }} update=yes
   with_items: git_projects
+  when: git_projects is defined
 
 - name: Copy config for {{ item.dest }}
   copy: src={{ item.src }} dest={{ item.dest }}
   with_items: config_copy
+  when: config_copy is defined
 
 - name: Git shell for {{ item }}
   shell: "{{ item }}"
   with_items: git_shell
+  when: git_shell is defined
   ignore_errors: True
 

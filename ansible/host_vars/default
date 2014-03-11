@@ -1,13 +1,9 @@
 ---
-httpd_conf: httpd.conf
+httpd_conf: config/configs/httpd/httpd.conf
 
-git_token: USER:TOKEN
 git_projects:
-  - { repo: USER/PROJECT.git, dest: /DIR/PROJECT }
-  - { repo: USER/PROJECT.git, dest: /DIR/PROJECT }
-config_copy:
-  - { src: LOCAL_CONTENT_DIR/, dest: /REMOTE_CONTENT_DIR }
-  - { src: LOCAL_CONTENT_DIR/, dest: /REMOTE_CONTENT_DIR }
+  - { repo: "ssh://git@github.com/khilnani/dot_files.git", dest: /data/git/dot_files }
+# config_copy:
+#  - { src: LOCAL_CONTENT_DIR/, dest: /REMOTE_CONTENT_DIR }
 git_shell:
-  - "pwd"
-  - "echo 'Hi!!'"
+  - "echo 'Git shell!!'"

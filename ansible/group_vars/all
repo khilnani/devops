@@ -1,12 +1,10 @@
 ---
-git_config: .gitconfig
-git_credentials: .git-credentials
+git_config: config/github/.gitconfig
+git_id_rsa_pub: config/github/id_rsa.pub
+git_id_rsa: config/github/id_rsa
 
-git_id_rsa_pub: id_rsa.pub
-git_id_rsa: id_rsa
+php_ini: config/configs/php/php.ini
 
-php_ini: php.ini
-
-httpd_htaccess: .htaccess
-httpd_htpasswd: .htpasswd
-httpd_index: index.php
+httpd_htaccess: config/configs/httpd/www/.htaccess
+httpd_htpasswd: config/configs/httpd/.htpasswd
+httpd_index: config/configs/httpd/www/index.php
