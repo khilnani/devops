@@ -7,7 +7,7 @@
   roles:
     - common
     - centos
-#    - mongodb
+    - mongodb
     - mysql
     - nodejs
     - git

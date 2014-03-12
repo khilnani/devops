@@ -1,22 +1,76 @@
 ---
+- name: Check if php mongo driver installed
+  shell: pecl list mongo
+  register: result
+  ignore_errors: true
+
 - name: Install php mongo driver
   shell: pecl install mongo
-  ignore_errors: True
+  when: result|failed
 
-- name: Copy mongodb repo for yum (x86)
+# i686, x86_64 ##############################
+
+- name: Copy mongodb repo (i686)
   template:
     src=mongodb.repo
     dest=/etc/yum.repos.d/mongodb.repo
-  when: ansible_architecture != "x86_64"
+  when: ansible_architecture == "i686"
 
-- name: Copy mongodb repo for yum (x86_64)
+- name: Copy mongodb repo (x86_64)
   template:
     src=mongodb_64.repo
     dest=/etc/yum.repos.d/mongodb.repo
   when: ansible_architecture == "x86_64"
 
-- name: Install mongodb
+- name: Install mongodb (i686, x86_64)
   yum: name=mongo-10gen,mongo-10gen-server state=present
+  when: ansible_architecture != "i386"
+
+# i386 ######################################
+
+- name: Download mongodb (i386)
+  shell: cd /tmp && curl -O http://downloads.mongodb.org/linux/mongodb-linux-i686-2.4.9.tgz && tar -zxvf mongodb-linux-i686-2.4.9.tgz && cp mongodb-linux-i686-2.4.9/bin/* /usr/bin/
+  when: ansible_architecture == "i386"
+
+- name: Create mongod user (i386)
+  user: name=mongod group=root state=present
+  when: ansible_architecture == "i386"
+
+- name: Copy /etc/init.d/mongod (i386)
+  template:
+    src=mongod
+    dest=/etc/init.d/mongod
+    owner=mongod
+    group=root
+    mode=0755
+  when: ansible_architecture == "i386"
+
+- name: Copy /etc/mongod.conf (i386)
+  template:
+    src=mongod.conf
+    dest=/etc/mongod.conf
+    owner=mongod
+    group=root
+    mode=0644
+  when: ansible_architecture == "i386"
+
+- name: Create /var/log/mongo/mongod.log (i386)
+  file:
+    state=touch
+    dest=/var/log/mongo/mongod.log
+    owner=mongod
+    group=root
+  when: ansible_architecture == "i386"
+
+- name: Create /var/lib/mongo (i386)
+  file:
+    state=directory
+    dest=/var/lib/mongo
+    owner=mongod
+    group=root
+  when: ansible_architecture == "i386"
+
+############################################
 
 - name: Restart mongod
   service: name=mongod state=restarted enabled=yes
