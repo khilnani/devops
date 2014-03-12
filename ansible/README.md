@@ -1,4 +1,4 @@
-## github.com/hilnani/devops/ansible
+## devops/ansible
 
 This setup is configured to log into a VM that has been setup for Vagrant. 
 i.e. has a user vagrant/vagrant and has the vagrant insecure public key setup in the `.ssh/authorized_keys`
