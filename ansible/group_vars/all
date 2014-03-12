@@ -1,10 +1,24 @@
 ---
+# Required: true|false
+git_delete: true
+
+# Required
 git_config: config/github/.gitconfig
+
+# Optional
 git_id_rsa_pub: config/github/id_rsa.pub
+
+# Optional
 git_id_rsa: config/github/id_rsa
 
+# Required
 php_ini: config/configs/php/php.ini
 
+# Optional
 httpd_htaccess: config/configs/httpd/www/.htaccess
+
+# Optional
 httpd_htpasswd: config/configs/httpd/.htpasswd
+
+# Required
 httpd_index: config/configs/httpd/www/index.php

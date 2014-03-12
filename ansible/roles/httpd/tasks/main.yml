@@ -13,6 +13,7 @@
     src={{ httpd_htaccess }}
     dest=/var/www/html/.htaccess
     mode=644
+  when: httpd_htaccess is defined
 
 - name: Create /data dir
   file: state=directory path=/data/
@@ -22,6 +23,7 @@
     src={{ httpd_htpasswd }}
     dest=/data/.htpasswd
     mode=644
+  when: httpd_htpasswd is defined
 
 - name: Disable firewall
   service: name=iptables state=stopped enabled=no

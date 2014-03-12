@@ -1,6 +1,7 @@
 ---
 - name: Delete /data/git
-  shell: rm -rf /data/git
+  shell: rm -rf /data/git && cd /data && pwd && ls
+  when: git_delete
 
 - name: Copy .gitconfig
   copy: src={{ git_config }} dest=~/.gitconfig mode=0664

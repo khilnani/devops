@@ -1,9 +1,15 @@
 ---
+# Optional
 httpd_conf: config/configs/httpd/httpd.conf
 
+# Optional
 git_projects:
   - { repo: "ssh://git@github.com/khilnani/dot_files.git", dest: /data/git/dot_files }
+
+# Optional
 # config_copy:
 #  - { src: LOCAL_CONTENT_DIR/, dest: /REMOTE_CONTENT_DIR }
+
+# Optional
 git_shell:
   - "echo 'Git shell!!'"
