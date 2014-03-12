@@ -2,11 +2,21 @@
 - name: Install php mongo driver
   shell: pecl install mongo
   ignore_errors: True
-- name: Copy mongodb repo for yum
+
+- name: Copy mongodb repo for yum (x86)
   template:
     src=mongodb.repo
     dest=/etc/yum.repos.d/mongodb.repo
+  when: ansible_architecture != "x86_64"
+
+- name: Copy mongodb repo for yum (x86_64)
+  template:
+    src=mongodb_64.repo
+    dest=/etc/yum.repos.d/mongodb.repo
+  when: ansible_architecture == "x86_64"
+
 - name: Install mongodb
   yum: name=mongo-10gen,mongo-10gen-server state=present
+
 - name: Restart mongod
   service: name=mongod state=restarted enabled=yes

@@ -9,7 +9,7 @@
     - centos
 #    - mongodb
     - mysql
-#    - nodejs
+    - nodejs
     - git
     - php
     - httpd
