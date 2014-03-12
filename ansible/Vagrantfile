@@ -11,6 +11,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     default.vm.box_url = "https://dl.dropboxusercontent.com/u/26568959/VagrantBoxes/CentOS-6.5-i386.box"
     default.vm.hostname = "default"
     default.vm.network "forwarded_port", guest: 80, host: 8080
+    default.vm.network "forwarded_port", guest: 28017, host: 28017
+    default.vm.network "forwarded_port", guest: 27017, host: 27017
     default.vm.provision "ansible" do |ansible|
       ansible.inventory_path = "./inventory"
       ansible.playbook = "./playbook.yml"

@@ -12,4 +12,4 @@ git_projects:
 
 # Optional
 git_shell:
-  - "echo 'Git shell!!'"
+  - "echo 'Hi!!'"

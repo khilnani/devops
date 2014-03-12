@@ -1,12 +1,12 @@
 ---
 - name: Check if php mongo driver installed
   shell: pecl list mongo
-  register: result
+  register: pecl_mongo
   ignore_errors: true
 
 - name: Install php mongo driver
   shell: pecl install mongo
-  when: result|failed
+  when: pecl_mongo|failed
 
 # i686, x86_64 ##############################
 
@@ -31,6 +31,7 @@
 - name: Download mongodb (i386)
   shell: cd /tmp && curl -O http://downloads.mongodb.org/linux/mongodb-linux-i686-2.4.9.tgz && tar -zxvf mongodb-linux-i686-2.4.9.tgz && cp mongodb-linux-i686-2.4.9/bin/* /usr/bin/
   when: ansible_architecture == "i386"
+  ignore_errors: True
 
 - name: Create mongod user (i386)
   user: name=mongod group=root state=present
