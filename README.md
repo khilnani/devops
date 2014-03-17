@@ -13,7 +13,7 @@ Each directory has it's own Readme with additional details.
   - SSH setup for Vagrant
 - **ansible/**
   - Installer script fo Mac OS X and Linux/CentOS
-  - Ansible playbook with reuseable roles for centos, nodejs, httpd, mongodb, myself, git etc.
+  - Ansible playbook with reuseable roles for centos, nodejs, httpd, mongodb, mysql, redis, memcached, git etc.
   - Contains a test Vagrant setup or testing. Simply run `vagrant up` in the directory.
 - **automation/**
   - PhantomJS based UI automation framework.
