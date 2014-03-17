@@ -1,0 +1,8 @@
+- name: Start redis
+  service: name=redis state=started
+
+- name: Restart redis
+  service: name=redis state=restarted
+
+- name: Stop redis
+  service: name=redis state=stopped

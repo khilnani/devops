@@ -1,0 +1,15 @@
+---
+- include: compile.yml
+
+- name: Push global config file
+  template:
+    src=redis.conf.j2
+    dest=/etc/redis/redis.conf
+    owner=root
+    group=root
+
+- name: Restart redis
+  service: name=redis state=restarted
+
+- name: redis redis-cli ping
+  shell: /usr/local/bin/redis-cli ping

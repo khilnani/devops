@@ -1,3 +1,42 @@
 ---
+- name: Check for previous installation
+  shell: "[ -f /usr/bin/mysqld_safe ]"
+  ignore_errors: True
+  register: mysqld_exists
+
 - name: Install mysql
-  yum: name=mysql,mysql-server state=present
+  yum: name=mysql,mysql-server,mysql-devel state=present
+  when: mysqld_exists|failed
+
+- name: Create /etc/mysql/conf.d
+  file:
+    state=directory
+    dest=/etc/mysql/conf.d
+    owner=mysql
+    group=mysql
+
+- name: Create /etc/mysql/
+  file:
+    state=directory
+    dest=/etc/mysql
+    owner=mysql
+    group=mysql
+
+- name: Ensure MySQL daemon is running
+  service: name=mysqld state=started
+
+- name: Ensure python mysql is installed
+  yum: name=MySQL-python state=present
+  when: mysqld_exists|failed
+
+- name: Set mysql root password
+  mysql_user: name=root password={{ mysql_root_password }} login_user=root login_password= state=present
+  when: mysqld_exists|failed
+
+- name: Remove the MySQL test database
+  mysql_db: db=test state=absent login_user=root login_password={{ mysql_root_password }}
+  when: mysqld_exists|failed
+
+- name: Ensure php mysql is installed
+  yum: name=php-mysql state=present
+

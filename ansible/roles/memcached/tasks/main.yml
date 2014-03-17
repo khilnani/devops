@@ -1,0 +1,18 @@
+---
+- name: Install default package
+  yum: name=memcached state=present
+
+- name: Push default configuration template
+  template:
+    src=memcached.conf.j2
+    dest=/etc/memcached.conf
+    owner=root group=root mode=0644
+  notify:
+  - Restart memcached
+
+# Ensure service is running.
+- name: Ensure deamon is running correctly
+  service: name=memcached state=started
+
+- name: Check stats
+  shell: echo "stats" | nc {{ memcached_ip }} {{ memcached_port }}

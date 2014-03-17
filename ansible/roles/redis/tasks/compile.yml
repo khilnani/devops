@@ -1,0 +1,66 @@
+---
+- name: Checking installed version of redis {{ redis_version }}
+  shell: /usr/bin/test "$(/usr/local/bin/redis-cli -v 2> /dev/null)" = "redis-cli {{ redis_version }}"
+  register: wanted_version_installed
+  ignore_errors: True
+
+
+- name: Install pre-requisites
+  yum: name=make,gcc,wget state=present
+  when: wanted_version_installed|failed
+
+- name: Download Redis package
+  shell: cd /tmp && wget http://download.redis.io/releases/redis-{{ redis_version }}.tar.gz && tar -xf redis-{{ redis_version }}.tar.gz
+  when: wanted_version_installed|failed
+
+- name: Build Redis source
+  shell: cd /tmp/redis-{{ redis_version }} && make && make install
+  when: wanted_version_installed|failed
+
+- name: Create /etc/redis
+  file:
+    state=directory
+    dest=/etc/redis
+    owner=root
+    group=root
+  when: wanted_version_installed|failed
+
+- name: Create /var/lib/redis
+  file:
+    state=directory
+    dest=/var/lib/redis
+    owner=root
+    group=root
+  when: wanted_version_installed|failed
+
+- name: Create /var/log/redis
+  file:
+    state=directory
+    dest=/var/log/redis/
+    owner=root
+    group=root
+  when: wanted_version_installed|failed
+
+- name: Create /var/log/redis/redis.log
+  file:
+    state=touch
+    dest=/var/log/redis/redis.log
+    owner=root
+    group=root
+  when: wanted_version_installed|failed
+
+- name: Copy /etc/init.d/redis
+  template:
+    src=redis
+    dest=/etc/init.d/redis
+    mode=0755
+    owner=root
+    group=root
+  when: wanted_version_installed|failed
+
+- name: Start redis
+  service: name=redis state=started 
+  when: wanted_version_installed|failed
+
+- name: redis redis-cli ping
+  shell: /usr/local/bin/redis-cli ping
