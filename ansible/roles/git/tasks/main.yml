@@ -38,9 +38,3 @@
   with_items: config_copy
   when: config_copy is defined
 
-- name: Git shell for {{ item }}
-  shell: "{{ item }}"
-  with_items: git_shell
-  when: git_shell is defined
-  ignore_errors: True
-

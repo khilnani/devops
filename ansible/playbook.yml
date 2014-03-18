@@ -6,12 +6,13 @@
   remote_user: vagrant
   roles:
     - common
-    - centos
-    - redis
-    - memcached
-    - mongodb
-    - mysql
-    - nodejs
-    - git
-    - php
-    - httpd
+#    - centos
+#    - redis
+#    - memcached
+#    - mongodb
+#    - mysql
+#    - nodejs
+#    - git
+#    - shell
+#    - php
+#    - httpd

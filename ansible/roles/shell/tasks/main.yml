@@ -1,0 +1,7 @@
+---
+- name: Running shell scripts
+  shell: "{{ item }}"
+  with_items: shell
+  when: shell is defined
+  ignore_errors: True
+

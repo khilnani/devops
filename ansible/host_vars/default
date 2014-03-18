@@ -11,5 +11,8 @@ git_projects:
 #  - { src: LOCAL_CONTENT_DIR/, dest: /REMOTE_CONTENT_DIR }
 
 # Optional
-git_shell:
-  - "echo 'Hi!!'"
+shell:
+  # Install genghis, mongodb web admin
+  - "cd /tmp && sudo wget https://github.com/bobthecow/genghis/archive/v2.3.10.zip && sudo unzip -o v2.3.10.zip && sudo cp genghis-2.3.10/genghis.php /var/www/html/genghis.php"
+  # Install adminer, mysql web admin
+  - "cd /var/www/html && sudo wget http://www.adminer.org/latest-en.php && sudo mv latest-en.php adminer.php && sudo chmod 755 *.php"
