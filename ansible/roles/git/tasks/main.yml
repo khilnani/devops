@@ -1,4 +1,9 @@
 ---
+- name: Create /data if it doesnt already exist
+  file:
+    state=directory
+    dest=/data
+
 - name: Delete /data/git
   shell: rm -rf /data/git && cd /data && pwd && ls
   when: git_delete

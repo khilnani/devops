@@ -64,3 +64,4 @@
 
 - name: redis redis-cli ping
   shell: /usr/local/bin/redis-cli ping
+  when: wanted_version_installed|failed

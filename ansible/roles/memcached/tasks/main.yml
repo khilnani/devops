@@ -1,6 +1,6 @@
 ---
 - name: Install default package
-  yum: name=memcached state=present
+  yum: name=nc,memcached state=present
 
 - name: Push default configuration template
   template:

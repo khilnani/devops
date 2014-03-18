@@ -55,6 +55,14 @@
     mode=0644
   when: ansible_architecture == "i386"
 
+- name: Create /var/log/mongo (i386)
+  file:
+    state=directory
+    dest=/var/log/mongo
+    owner=mongod
+    group=root
+  when: ansible_architecture == "i386"
+
 - name: Create /var/log/mongo/mongod.log (i386)
   file:
     state=touch
