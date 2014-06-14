@@ -25,13 +25,8 @@
     - By Name - `sudo enter-chroot -n trusty startxfce4`
     - From the USB Drive - `sudo enter-chroot -c /usr/local/chroots -n trusty startxfce4`
 - In Ubuntu, run - `wget -O - http://goo.gl/XiQsTs | sudo bash`
-
-## Links
-
-- https://github.com/dnschneid/crouton/wiki
-- https://help.ubuntu.com/community/ApacheMySQLPHP
-- http://www.overdigital.com/2013/06/02/how-to-use-your-chromebook-pixel-as-a-webserver/
-- http://tomwwolf.com/chromebook-14-compedium/chromebook-crouton-cookbook/
+- Logout - `exit` or Logout
+- Apache, MySQL and MongoDB will be auto started when u enter Ubuntu.
 
 ## Backup and Restore
 
@@ -41,10 +36,19 @@
 
 ## Notes
 
+- Apache, MySQL and MongoDB will be auto started when u enter Ubuntu
 - You can flip through your running chroot desktops and Chromium OS by hitting `Ctrl+Alt+Shift+Back` and `Ctrl+Alt+Shift+Forward`
 - You can start Xfce via the startxfce4 host command: `sudo startxfce4`
-- apache is at `/etc/apache2` and `/var/www`
-- php is at `/etc/php5/apache2/php.ini`
-- mysql is at `/etc/mysql/my.cnf`
+- Apache is at `/etc/apache2` and `/var/www`
+- Php is at `/etc/php5/apache2/php.ini`
+- MyAQL is at `/etc/mysql/my.cnf`
+- Mongo DB Dir is `/data/db`
 - Start Apache - `sudo service apache2 start` or `sudo /etc/init.d/apache2 start`
 - Start httpd - `sudo /etc/init.d/mysql start`
+
+## Links
+
+- https://github.com/dnschneid/crouton/wiki
+- https://help.ubuntu.com/community/ApacheMySQLPHP
+- http://www.overdigital.com/2013/06/02/how-to-use-your-chromebook-pixel-as-a-webserver/
+- http://tomwwolf.com/chromebook-14-compedium/chromebook-crouton-cookbook/
