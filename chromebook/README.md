@@ -1,6 +1,9 @@
 ## Install Ubuntu on Chromebook
 
-- Restart using `ESC-Refresh-Power`
+- Restart the Chromebook using `ESC-Refresh-Power`
+
+> **The Next command will ERASE ALL DATA in your Chromebook**
+
 - At the prompt, `CTRL-D` to erase and install ChromeOS in Developer mode
 - Launch terminal - `CTRL-ALT-t`
 - Download [Crouton](http://goo.gl/fd3zc) from (https://github.com/dnschneid/crouton)
