@@ -26,7 +26,7 @@
     - From the USB Drive - `sudo enter-chroot -c /usr/local/chroots -n trusty startxfce4`
 - In Ubuntu, run - `wget -O - http://goo.gl/XiQsTs | sudo bash`
 - Logout - `exit` or Logout
-- Apache, MySQL and MongoDB will be auto started when u enter Ubuntu.
+- Apache, MySQL and MongoDB will be auto started when u enter Ubuntu going forward.
 
 ## Backup and Restore
 
