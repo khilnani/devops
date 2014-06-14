@@ -25,6 +25,7 @@
     - By Name - `sudo enter-chroot -n trusty startxfce4`
     - From the USB Drive - `sudo enter-chroot -c /usr/local/chroots -n trusty startxfce4`
 - In Ubuntu, run - `wget -O - http://goo.gl/XiQsTs | sudo bash` (This runs the `install-lamp-mongo.sh` script in this github directory) 
+  - The script will prompt you twice - (1) for your sudo password, and (2) to set your MySQL root password.
 - Logout - `exit` or Logout
 - Apache, MySQL and MongoDB will be auto started when u enter Ubuntu going forward.
 
