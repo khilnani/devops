@@ -18,7 +18,7 @@
     - `sudo enter-chroot startxfce4`
     - `sudo enter-chroot -n trusty startxfce4`
     - `sudo enter-chroot -c /usr/local/chroots -n trusty startxfce4`
-- In Ubuntu, run - `wget -O - http://goo.gl/YMhdcP | sudo bash`
+- In Ubuntu, run - `wget -O - http://goo.gl/XiQsTs | sudo bash`
 
 ## Links
 
