@@ -3,21 +3,24 @@
 - Restart using `ESC-Refresh-Power`
 - At the prompt, `CTRL-D` to erase and install ChromeOS in Developer mode
 - Launch terminal - `CTRL-ALT-t`
-- Download and Install [Crouton](http://goo.gl/fd3zc) from (https://github.com/dnschneid/crouton)
-  - `sudo sh -e ~/Downloads/crouton -t cli-extra`
-  - `sudo sh -e crouton -p "/media/removable/USB Drive/" -r trusty -t cli-extra`
-  - `sudo sh -e crouton -p "/media/removable/USB Drive/" -r trusty -t xfce`
+- Download [Crouton](http://goo.gl/fd3zc) from (https://github.com/dnschneid/crouton)
+- `cd ~/Downloads/`
+  - CLI - `sudo sh -e crouton -r trusty -t cli-extra`
+  - GUI - `sudo sh -e crouton -r trusty -t xfce`
+
+> Use `-p "/media/removable/USB Drive/"` to install to an external drive
+
 - Open up port 80 if needed - `sudo /sbin/iptables -A INPUT -p tcp --dport 80 -j ACCEPT`
 - Turn off sleep mode - `sudo initctl stop powerd`
 - Enter Linux 
   - CLI
-    - `sudo enter-chroot`
-    - `sudo enter-chroot -n trusty`
-    - `sudo enter-chroot -c /usr/local/chroots -n trusty`
+    - Default - `sudo enter-chroot`
+    - By Name - `sudo enter-chroot -n trusty`
+    - From the USB Drive - `sudo enter-chroot -c /usr/local/chroots -n trusty`
   - XFE
-    - `sudo enter-chroot startxfce4`
-    - `sudo enter-chroot -n trusty startxfce4`
-    - `sudo enter-chroot -c /usr/local/chroots -n trusty startxfce4`
+    - Default - `sudo enter-chroot startxfce4`
+    - By Name - `sudo enter-chroot -n trusty startxfce4`
+    - From the USB Drive - `sudo enter-chroot -c /usr/local/chroots -n trusty startxfce4`
 - In Ubuntu, run - `wget -O - http://goo.gl/XiQsTs | sudo bash`
 
 ## Links
