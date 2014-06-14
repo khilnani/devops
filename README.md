@@ -17,3 +17,6 @@ Each directory has it's own Readme with additional details.
   - Contains a test Vagrant setup for testing. Simply run `vagrant up` in the directory.
 - **automation/**
   - PhantomJS based UI automation framework.
+- **chromebook/**
+  - Chromebook Ubuntu install notes based on Crouton.
+  - MySQL, Apache2, Mongodb installer script
