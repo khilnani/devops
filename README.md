@@ -19,4 +19,4 @@ Each directory has it's own Readme with additional details.
   - PhantomJS based UI automation framework.
 - **chromebook/**
   - Chromebook Ubuntu install notes based on Crouton.
-  - MySQL, Apache2, Mongodb installer script
+  - MySQL, Apache2, Mongodb installer script.
