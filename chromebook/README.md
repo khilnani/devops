@@ -24,7 +24,9 @@
     - Default - `sudo enter-chroot startxfce4`
     - By Name - `sudo enter-chroot -n trusty startxfce4`
     - From the USB Drive - `sudo enter-chroot -c /usr/local/chroots -n trusty startxfce4`
-- In Ubuntu, run - `wget -O - http://goo.gl/XiQsTs | sudo bash` (This runs the `install-lamp-mongo.sh` script in this github directory) 
+- In Ubuntu, run - `wget -O - http://goo.gl/XiQsTs | sudo bash`
+  - This runs the `install-lamp-mongo.sh` script in this github directory
+  - Installs: Chrome Browser, Ruby/Rails, NodeJS, Apache, MySQL and MongoDB
   - The script will prompt you twice - (1) for your sudo password, and (2) to set your MySQL root password.
 - Logout - `exit` or Logout
 - Apache, MySQL and MongoDB will be auto started when u enter Ubuntu going forward.
@@ -53,3 +55,4 @@
 - https://help.ubuntu.com/community/ApacheMySQLPHP
 - http://www.overdigital.com/2013/06/02/how-to-use-your-chromebook-pixel-as-a-webserver/
 - http://tomwwolf.com/chromebook-14-compedium/chromebook-crouton-cookbook/
+- https://gorails.com/setup/ubuntu/14.04
