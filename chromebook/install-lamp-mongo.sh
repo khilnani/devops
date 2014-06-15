@@ -25,9 +25,9 @@ rbenv rehash
 rails -v
 
 echo '## Install NodeJS'
-sudo add-apt-repository ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get install nodejs
+sh -c 'echo "ppa:chris-lea/node.js" >> /etc/apt/sources.list.d/node.list'
+apt-get update
+apt-get install nodejs
 
 echo '## Install Chrome'
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
