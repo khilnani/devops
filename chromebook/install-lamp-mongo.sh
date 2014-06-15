@@ -27,7 +27,7 @@ rbenv rehash
 rails -v
 
 echo '## Install NodeJS'
-add-apt-repository ppa:chris-lea/node.js
+add-apt-repository -y ppa:chris-lea/node.js
 apt-get -y update
 apt-get -y install nodejs
 
