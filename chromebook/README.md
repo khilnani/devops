@@ -9,9 +9,11 @@
 - Download [Crouton](http://goo.gl/fd3zc) from (https://github.com/dnschneid/crouton)
 - `cd ~/Downloads/`
   - CLI - `sudo sh -e crouton -r trusty -t cli-extra`
-  - GUI - `sudo sh -e crouton -r trusty -t xfce`
+  - XFCE - `sudo sh -e crouton -r trusty -t xfce`
+  - X11- `sudo sh -e crouton -p /media/removable/ExtSD/crouton/ -r trusty -t x11`
 
-> Use `-p "/media/removable/USB Drive/"` to install to an external drive
+> - Use `-p "/media/removable/ExtSD/crouton/"` to install to an external drive
+> - Also see https://github.com/dnschneid/crouton/wiki/get-crouton-awesome.sh
 
 - Open up port 80 if needed - `sudo /sbin/iptables -A INPUT -p tcp --dport 80 -j ACCEPT`
 - Turn off sleep mode - `sudo initctl stop powerd`
