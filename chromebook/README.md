@@ -10,7 +10,7 @@
 - `cd ~/Downloads/`
   - CLI - `sudo sh -e crouton -r trusty -t cli-extra`
   - XFCE - `sudo sh -e crouton -r trusty -t xfce`
-  - X11- `sudo sh -e crouton -p /media/removable/ExtSD/crouton/ -r trusty -t x11`
+  - X11- `sudo sh -e crouton -p /media/removable/USB Drive/crouton/ -r trusty -t x11`
 
 > - Use `-p "/media/removable/ExtSD/crouton/"` to install to an external drive
 > - Also see https://github.com/dnschneid/crouton/wiki/get-crouton-awesome.sh
