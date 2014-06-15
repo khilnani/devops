@@ -6,7 +6,7 @@ apt-get -y update
 echo '## Development libs'
 apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
 apt-get -y install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
-apt-get -y install python-software-properties python g++ make
+apt-get -y install software-properties-common python-software-properties python g++ make
 
 
 echo '## Install git'
@@ -27,7 +27,6 @@ rbenv rehash
 rails -v
 
 echo '## Install NodeJS'
-## sh -c 'echo "ppa:chris-lea/node.js" >> /etc/apt/sources.list.d/node.list'
 add-apt-repository ppa:chris-lea/node.js
 apt-get -y update
 apt-get -y install nodejs
