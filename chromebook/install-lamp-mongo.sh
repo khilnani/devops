@@ -29,3 +29,10 @@ echo 'export HOME=/etc/mysql' >> /etc/rc.local
 echo 'umask 007' >> /etc/rc.local
 echo '[ -d /var/run/mysqld ] || install -m 755 -o mysql -g root -d /var/run/mysqld' >> /etc/rc.local
 echo '/usr/sbin/mysqld &' >> /etc/rc.local
+
+
+## Install Chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-get update 
+sudo apt-get install google-chrome-stable
