@@ -6,7 +6,7 @@ apt-get -y update
 echo '## Install git'
 apt-get -y install git-core
 
-## Install Chrome
+echo '## Install Chrome'
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
 sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 apt-get -y update 
