@@ -28,8 +28,8 @@ rails -v
 
 echo '## Install NodeJS'
 ## sh -c 'echo "ppa:chris-lea/node.js" >> /etc/apt/sources.list.d/node.list'
-add-apt-repository ppa:chris-lea/node.js
-apt-get -y update
+## add-apt-repository ppa:chris-lea/node.js
+## apt-get -y update
 apt-get -y install nodejs
 
 echo '## Install Chrome'
