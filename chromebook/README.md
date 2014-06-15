@@ -8,9 +8,8 @@
 - Launch terminal - `CTRL-ALT-t`
 - Download [Crouton](http://goo.gl/fd3zc) from (https://github.com/dnschneid/crouton)
 - `cd ~/Downloads/`
-  - CLI - `sudo sh -e crouton -r trusty -t cli-extra`
   - XFCE - `sudo sh -e crouton -r trusty -t xfce`
-  - X11- `sudo sh -e crouton -p /media/removable/USB Drive/crouton/ -r trusty -t x11`
+  - X11- `sudo sh -e crouton -r trusty -t x11`
 
 > - Use `-p "/media/removable/ExtSD/crouton/"` to install to an external drive
 > - Also see https://github.com/dnschneid/crouton/wiki/get-crouton-awesome.sh
@@ -47,7 +46,7 @@
 - You can start Xfce via the startxfce4 host command: `sudo startxfce4`
 - Apache is at `/etc/apache2` and `/var/www`
 - Php is at `/etc/php5/apache2/php.ini`
-- MyAQL is at `/etc/mysql/my.cnf`
+- MySQL is at `/etc/mysql/my.cnf`
 - Mongo DB Dir is `/data/db`
 - Start Apache - `sudo service apache2 start` or `sudo /etc/init.d/apache2 start`
 - Start httpd - `sudo /etc/init.d/mysql start`
