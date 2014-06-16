@@ -9,7 +9,6 @@
 - Download [Crouton](http://goo.gl/fd3zc) from (https://github.com/dnschneid/crouton)
 - `cd ~/Downloads/`
   - XFCE - `sudo sh -e crouton -r trusty -t xfce`
-  - X11- `sudo sh -e crouton -r trusty -t x11`
 
 > - Use `-p "/media/removable/ExtSD/crouton/"` to install to an external drive
 > - Also see https://github.com/dnschneid/crouton/wiki/get-crouton-awesome.sh
@@ -20,12 +19,9 @@
   - CLI
     - Default - `sudo enter-chroot`
     - By Name - `sudo enter-chroot -n trusty`
-    - From the USB Drive - `sudo enter-chroot -c /usr/local/chroots -n trusty`
   - XFE
     - Default - `sudo enter-chroot startxfce4`
     - By Name - `sudo enter-chroot -n trusty startxfce4`
-    - From the USB Drive - `sudo enter-chroot -c /usr/local/chroots -n trusty startxfce4`
-    - X11 - `sudo enter-chroot xinit`
 - In Ubuntu, run - `wget -O - http://goo.gl/XiQsTs | sudo bash`
   - This runs the `install-lamp-mongo.sh` script in this github directory
   - Installs: Chrome Browser, Ruby/Rails, NodeJS, Apache, MySQL and MongoDB
