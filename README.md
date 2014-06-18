@@ -11,7 +11,7 @@ Each directory has it's own Readme with additional details.
 - **vagrant/** - Vagrant Boxes
   - Install my default custom Vagrant Boxes
   - SSH setup for Vagrant
-- **vagrant_sample**
+- **vagrant_sample/**
   - A sample setup of Vagrant and Ansible to setup a CentOS 6.5 and Ubuntu 12.04 LTS
 - **ansible/**
   - Installer script fo Mac OS X and Linux/CentOS
