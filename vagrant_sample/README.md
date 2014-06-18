@@ -6,3 +6,4 @@
   - Ansible - http://docs.ansible.com/intro_installation.html
 - Download this directory 
 - Execute `vagrant up` or `vagrant up centos` or `vagrant up ubuntu`
+- The directory with the Vagrantfile  is mounted in the VM at `/host_data`.
