@@ -1,0 +1,9 @@
+---
+- name: Get OS Release Info
+  shell: cat /etc/*-release
+- name: Update system
+  apt: upgrade=dist
+- name: Update Python Setup Tools
+  apt: pkg=python-setuptools state=latest
+- name: Install Pip
+  shell: easy_install pip
