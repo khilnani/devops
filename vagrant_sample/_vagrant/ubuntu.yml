@@ -1,0 +1,13 @@
+---
+- hosts: all
+  sudo: yes
+  remote_user: vagrant
+  tasks:
+    - name: Get OS Release Info
+      shell: cat /etc/*-release
+
+    - name: Install Python Setup Tools
+      apt: pkg=python-setuptools state=latest
+
+    - name: Install pip
+      command: easy_install pip
