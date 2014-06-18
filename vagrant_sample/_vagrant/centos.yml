@@ -1,0 +1,23 @@
+---
+- hosts: all 
+  sudo: yes 
+  remote_user: vagrant
+  tasks:
+    - name: Get OS Release Info
+      shell: cat /etc/*-release
+    - name: Change SELinux Policy
+      shell: echo 0 >/selinux/enforce
+    - name: Install python-selinux
+      yum: name=libselinux-python state=latest
+    - name: Update system
+      yum: name=* state=latest
+    - name: Update Python Setup Tools
+      yum: name=python-setuptools state=latest
+    - name: Install Development Tools
+      yum: name="@Development Tools" state=latest
+    - name: Install Common Development packages
+      shell: yum -y install man ruby wget curl git-core gcc g++ make automake autoconf curl-devel openssl-devel zlib-devel apr-devel apr-util-devel sqlite-d
+    - name: Update gems
+      shell: gem update --system
+    - name: Install Pip 
+      shell: easy_install pip
