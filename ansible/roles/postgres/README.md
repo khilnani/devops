@@ -1,0 +1,2 @@
+- `su - postgres`
+- `psql postgres`

@@ -2,6 +2,9 @@
 - name: Install httpd
   yum: name=httpd-2.2.15 state=present
 
+- name: Install SSL
+  shell: yum -y install mod_ssl openssl
+
 - name: Install Hello World PHP script
   template:
     src={{ httpd_index }}
@@ -35,6 +38,14 @@
 - name: Copy httpd.conf
   copy: src={{ httpd_conf }} dest=/etc/httpd/conf/httpd.conf
   when: httpd_conf is defined
+
+- name: Backup ssl.conf
+  shell: yes n | cp -i /etc/httpd/conf.d/ssl.conf /etc/httpd/conf.d/ssl.conf.`date +%Y%m%d-%H%M%S`
+  when: ssl_conf is defined
+
+- name: Copy ssl.conf
+  copy: src={{ ssl_conf }} dest=/etc/httpd/conf.d/ssl.conf
+  when: ssl_conf is defined
 
 - name: Restart httpd
   service: name=httpd state=restarted enabled=yes
