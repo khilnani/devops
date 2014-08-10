@@ -49,6 +49,13 @@ echo '## Install LAMP'
 apt-get -y install tasksel
 tasksel install lamp-server
 
+echo '## Install postgres'
+sudo apt-get install postgresql postgresql-contrib php5-pgsql
+sudo su - postgres -c "psql -U postgres -d postgres -c \"alter user postgres with password 'password';\""
+sudo -u postgress service postgresql restart
+sudo service apache2 restart
+echo 'use: sudo su – postgres'
+
 echo '## Download Adminer'
 wget http://www.adminer.org/latest-en.php -O /var/www/html/adminer.php
 chmod 755 /var/www/html/adminer.php
