@@ -44,8 +44,10 @@
 - Php is at `/etc/php5/apache2/php.ini`
 - MySQL is at `/etc/mysql/my.cnf`
 - Mongo DB Dir is `/data/db`
+- Postgress Console - `sudo su - postgress -c psql`
 - Start Apache - `sudo service apache2 start` or `sudo /etc/init.d/apache2 start`
 - Start httpd - `sudo /etc/init.d/mysql start`
+- Start Postgres - `sudo service postgresql start`
 
 ## Links
 
