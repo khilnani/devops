@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## USAGE: vpn.sh USERNAME
+## http://www.infradead.org/openconnect/csd.html
 
 ### Edit this section for your VPN Setup
 SSLVpn="ssl.example.com"
