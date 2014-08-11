@@ -1,4 +1,7 @@
 #!/bin/bash
+
+## USAGE: vpn.sh USERNAME
+
 ### Edit this section for your VPN Setup
 SSLVpn="ssl.example.com"
 SearchDomain="example.com"
@@ -13,6 +16,6 @@ cp /etc/resolv.conf ~/.resolv.conf
 echo "nameserver ${DNSServer}" > /etc/resolv.conf
 echo "search ${SearchExample}" >> /etc/resolv.conf
 cat ~/.resolv.conf >> /etc/resolv.conf
-openconnect -s /etc/vpnc/vpnc-script ${SSLVpn}
+openconnect -s /etc/vpnc/vpnc-script ${SSLVpn} --csd-user=$1
 cat ~/.resolv.conf > /etc/resolv.conf
 rm /dev/net/tun0
