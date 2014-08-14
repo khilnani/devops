@@ -12,6 +12,9 @@ apt-get -y install software-properties-common python-software-properties python 
 echo '## Install git'
 apt-get -y install git-core
 
+echo '## Install mercurial'
+sudo apt-get install mercurial meld
+
 echo '## Install Ruby'
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
