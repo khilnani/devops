@@ -1,0 +1,9 @@
+- name: Install repo
+  shell: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+
+- name: Install packages
+  yum: name=$item state=installed
+  with_items:
+    - golang
+    - hg
+
