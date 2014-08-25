@@ -1,1 +1,13 @@
- 
+#!/system/bin/sh
+
+export EXTERNAL_STORAGE=/mnt/sdcard
+PYTHON_BASE=/data/data/com.googlecode.pythonforandroid/files/python
+PYTHON_EXTRAS=${EXTERNAL_STORAGE}/com.googlecode.pythonforandroid/extras/python
+PYTHONPATH=${PYTHON_EXTRAS}
+PYTHONPATH=${PYTHONPATH}:${PYTHON_BASE}/lib/python2.6/lib-dynload
+export PYTHONPATH
+export TEMP=${PYTHON_EXTRAS}/tmp
+export PYTHON_EGG_CACHE=$TEMP
+export PYTHONHOME=${PYTHON_BASE}
+export LD_LIBRARY_PATH=${PYTHON_BASE}/lib
+${PYTHON_BASE}/bin/python "$@"
