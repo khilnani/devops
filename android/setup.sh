@@ -1,4 +1,5 @@
-#!/bin/system/sh
+#!/system/bin/sh
+
 mkdir ~/bin
 cd ~/bin
 curl -O -k https://raw.githubusercontent.com/khilnani/devops/master/android/py
