@@ -1,9 +1,9 @@
 Python
 
-- Install SL4A r6 apk from https://code.google.com/p/android-scripting/
-- Install PythonForAndroid r5 apk from https://code.google.com/p/python-for-android/
 - In Terminal IDE
   - `curl -k -s https://raw.githubusercontent.com/khilnani/devops/master/android/setup.sh | sh`
+- Install `sl4a_r6.apk` and `PythonForAndroid_r5.apk` that the above script downloads to Downloads dir 
+
 
 Sgit
 
