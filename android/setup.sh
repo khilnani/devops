@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/system/bin/sh -x
 
 mkdir ~/bin
 cd ~/bin
