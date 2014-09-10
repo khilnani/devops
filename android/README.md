@@ -3,10 +3,7 @@ Python
 - Install SL4A r6 apk from https://code.google.com/p/android-scripting/
 - Install PythonForAndroid r5 apk from https://code.google.com/p/python-for-android/
 - In Terminal IDE
-  - `makedir ~/bin`
-  - `cp ./py ~/bin`
-  - `echo "export PATH=$PATH:~/bin" >> ~/.bashrc`
-  - `py` to enter python
+  - `curl -k -s https://raw.githubusercontent.com/khilnani/devops/master/android/setup.sh | sh`
 
 Sgit
 
