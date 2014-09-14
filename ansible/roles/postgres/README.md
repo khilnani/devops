@@ -1,2 +1,6 @@
 - `su - postgres`
 - `psql postgres`
+- `createdb mydb`
+- `createuser -P`
+- `psql`
+- `GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;`
