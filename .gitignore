@@ -1,3 +1,6 @@
 ansible/config
 .vagrant
 .DS_Store
+chromebook/scala-2.9.1-1.tgz
+chromebook/sbt.deb
+chromebook/target/
