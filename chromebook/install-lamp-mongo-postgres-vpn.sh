@@ -53,7 +53,7 @@ apt-get -y install tasksel
 tasksel install lamp-server
 
 echo '## Install postgres'
-sudo apt-get install postgresql postgresql-contrib php5-pgsql
+sudo apt-get install postgresql-client-9.3 postgresql-9.3 postgresql-contrib-9.3 php5-pgsql libpq-dev postgresql-server-dev-9.3
 sudo su - postgres -c "psql -U postgres -d postgres -c \"alter user postgres with password 'password';\""
 sudo -u postgress service postgresql restart
 sudo service apache2 restart
