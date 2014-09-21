@@ -15,6 +15,10 @@ sed -i -e 's/rhgb quiet/rhgb quiet vga=791/g' /etc/grub.conf
 
 adduser nkhilnani
 
+chmod 666 /etc/sudoers
+echo 'nkhilnani ALL=(ALL) ALL' >> /etc/sudoers
+chmod 440 /etc/sudoers
+
 ##############################################
 # Install core software
 ##############################################
