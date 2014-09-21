@@ -1,6 +1,6 @@
 - `su - postgres`
-- `psql postgres`
-- `createdb mydb`
-- `createuser -P`
 - `psql`
+- `CREATE DATABASE mydb;`
+- `CREATE USER NAME WITH PASSWORD 'password';`
+- `ALTER USER NAME WITH PASSWORD 'password';`
 - `GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;`
