@@ -5,8 +5,9 @@
   sudo: yes
   remote_user: vagrant
   roles:
-    - common
+#    - common
 #    - centos
+#    - aws-ami
 #    - redis
 #    - memcached
 #    - mongodb

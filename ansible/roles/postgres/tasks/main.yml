@@ -1,34 +1,15 @@
 - name: Install packages
-  yum: name=$item state=installed
-  with_items:
-    - php-pgsql
-    - python-psycopg2
-    - postgresql-server
-    - postgresql
-    - postgresql-devel
+  shell: yum -y install php-pgsql python-psycopg2 postgresql-server postgresql postgresql-devel
 
 - name: Initiate database
   command: service postgresql initdb
-           creates=/var/lib/pgsql/data/postgresql.conf
+  ignore_errors: True
 
 - name: Start PostgreSQL and enable at boot
   service: name=postgresql
           enabled=yes
           state=started
 
-- name: Ensure PostgreSQL is listening on all localhost
-  lineinfile: dest=/var/lib/pgsql/data/postgresql.conf
-    regexp='^#?listen_addresses\s*='
-    line="listen_addresses = '127.0.0.1'"
-    state=present
-  notify: restart postgresql
-
-- lineinfile: dest=/var/lib/pgsql/data/pg_hba.conf
-             regexp='host\s+all\s+all\s+127.0.0.1/32\s+md5'
-             line='host all all 127.0.0.1/32 md5'
-             insertbefore=BOF
-  notify: restart postgresql
-
-- name: CHange password
+- name: Change password
   command: su - postgres -c "psql -U postgres -d postgres -c \"alter user postgres with password '{{ postgres_password }}';\""
   notify: restart postgresql

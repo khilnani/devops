@@ -1,0 +1,7 @@
+---
+- name: Install python27
+  shell: yum -y install python27 python27-devel python-setuptools sqlite sqlite-devel
+- name: Install Pip
+  shell: easy_install pip 
+- name: check python version
+  shell: python27 --version

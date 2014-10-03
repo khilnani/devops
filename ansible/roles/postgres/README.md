@@ -4,3 +4,4 @@
 - `CREATE USER NAME WITH PASSWORD 'password';`
 - `ALTER USER NAME WITH PASSWORD 'password';`
 - `GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;`
+- Update `/var/lib/pgsql9/data/pg_hba.conf` with ` host    all             all             127.0.0.1/32            md5`

@@ -1,6 +1,17 @@
 ---
-- name: Install httpd
+- name: Install CentOS httpd
   yum: name=httpd-2.2.15 state=present
+  register: centos_result
+  ignore_errors: True
+
+
+- name: Install AWS AMI httpd
+  yum: name="@Web Server" state=present
+  when: centos_result|failed
+
+- name: Install AWS AMI httpd PHP Support
+  yum: name="@PHP Support" state=present
+  when: centos_result|failed
 
 - name: Install SSL
   shell: yum -y install mod_ssl openssl
