@@ -1,0 +1,17 @@
+---
+- name: Install varnish
+  shell: yum -y install varnish
+
+- name: Copy varnish.vcl
+  template:
+    src=default.vcl
+    dest=/etc/varnish/default.vcl
+
+- name: Copy varnish settings Amazon AMI/CentOS
+  template:
+    src=varnish
+    dest=/etc/sysconfig/varnish
+
+- name: Restart varnish
+  shell: echo 'hi'
+  notify: Restart varnish
