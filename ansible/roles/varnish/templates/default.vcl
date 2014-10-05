@@ -13,13 +13,14 @@ backend default {
 # Below is a commented-out copy of the default VCL logic.  If you
 # redefine any of these subroutines, the built-in logic will be
 # appended to your code.
-# sub vcl_recv {
-#   if (req.http.Cookie) {
-#     if ( !( req.url ~ ^/admin/) ) {
-#       remove req.http.Cookie;
-#     }
-#   }
-# }
+sub vcl_recv {
+  # Remove cookies for all urls except admin webapp
+  if (req.http.Cookie) {
+    if ( !( req.url ~ "^/admin/") ) {
+      unset req.http.Cookie;
+    }
+  }
+}
 
 # sub vcl_recv {
 #     if (req.restarts == 0) {
