@@ -7,19 +7,28 @@
 backend default {
   .host = "127.0.0.1";
   .port = "8080";
+  .connect_timeout = 300s;
 }
 # 
 # Below is a commented-out copy of the default VCL logic.  If you
 # redefine any of these subroutines, the built-in logic will be
 # appended to your code.
 # sub vcl_recv {
-#     if (req.restarts == 0) {
-#   if (req.http.x-forwarded-for) {
-#       set req.http.X-Forwarded-For =
-#     req.http.X-Forwarded-For + ", " + client.ip;
-#   } else {
-#       set req.http.X-Forwarded-For = client.ip;
+#   if (req.http.Cookie) {
+#     if ( !( req.url ~ ^/admin/) ) {
+#       remove req.http.Cookie;
+#     }
 #   }
+# }
+
+# sub vcl_recv {
+#     if (req.restarts == 0) {
+#       if (req.http.x-forwarded-for) {
+#         set req.http.X-Forwarded-For =
+#         req.http.X-Forwarded-For + ", " + client.ip;
+#       } else {
+#         set req.http.X-Forwarded-For = client.ip;
+#       }
 #     }
 #     if (req.request != "GET" &&
 #       req.request != "HEAD" &&
@@ -87,33 +96,47 @@ backend default {
 #     return (deliver);
 # }
 # 
-# sub vcl_deliver {
-#     return (deliver);
-# }
-# 
-# sub vcl_error {
-#     set obj.http.Content-Type = "text/html; charset=utf-8";
-#     set obj.http.Retry-After = "5";
-#     synthetic {"
-# <?xml version="1.0" encoding="utf-8"?>
-# <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-#  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-# <html>
-#   <head>
-#     <title>"} + obj.status + " " + obj.response + {"</title>
-#   </head>
-#   <body>
-#     <h1>Error "} + obj.status + " " + obj.response + {"</h1>
-#     <p>"} + obj.response + {"</p>
-#     <h3>Guru Meditation:</h3>
-#     <p>XID: "} + req.xid + {"</p>
-#     <hr>
-#     <p>Varnish cache server</p>
-#   </body>
-# </html>
+sub vcl_deliver {
+  remove resp.http.X-Varnish;
+  remove resp.http.Via;
+  remove resp.http.X-Mod-Pagespeed;
+  remove resp.http.X-Powered-By;
+  remove resp.http.Age;
+
+  if (obj.hits > 0) {
+    set resp.http.X-Info = "HIT";
+  } else {
+    set resp.http.X-Info = "MISS";
+  }
+
+#    return (deliver);
+}
+
+#sub vcl_error {
+#    set obj.http.Content-Type = "text/html; charset=utf-8";
+#    set obj.http.Retry-After = "5";
+#    unset obj.http.Server;
+#
+#    synthetic {"
+#<?xml version="1.0" encoding="utf-8"?>
+#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+# "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+#<html>
+#  <head>
+#    <title>"} + obj.status + " " + obj.response + {"</title>
+#  </head>
+#  <body>
+#    <h1>Error "} + obj.status + " " + obj.response + {"</h1>
+#    <p>"} + obj.response + {"</p>
+#    <h3>Guru Meditation:</h3>
+#    <p>XID: "} + req.xid + {"</p>
+#    <hr>
+#    <p>Varnish cache server</p>
+#  </body>
+#</html>
 # "};
 #     return (deliver);
-# }
+#}
 # 
 # sub vcl_init {
 #   return (ok);

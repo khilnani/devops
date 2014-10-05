@@ -1,6 +1,6 @@
 ---
 - name: Install varnish
-  shell: yum -y install varnish
+  shell: yum -y install varnish-3.0.5
 
 - name: Copy varnish.vcl
   template:
