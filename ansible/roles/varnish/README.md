@@ -1,0 +1,2 @@
+- Restart - `service varnish restart`
+- Restart Error debugging - `varnishd -f /etc/varnish/default.vcl`
