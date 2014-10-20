@@ -13,5 +13,5 @@
     dest=/etc/sysconfig/varnish
 
 - name: Restart varnish
-  shell: echo 'hi'
+  shell: echo 'Hi'
   notify: Restart varnish
