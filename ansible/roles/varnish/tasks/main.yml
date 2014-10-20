@@ -2,9 +2,9 @@
 - name: Install varnish
   shell: yum -y install varnish-3.0.5
 
-- name: Copy varnish.vcl
+- name: Copy default varnish vcl
   template:
-    src=default.vcl
+    src={{ default_vcl }}
     dest=/etc/varnish/default.vcl
 
 - name: Copy varnish settings Amazon AMI/CentOS
