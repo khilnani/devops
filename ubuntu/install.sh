@@ -8,6 +8,8 @@ apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadli
 apt-get -y install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev git-core
 apt-get -y install software-properties-common python-software-properties python g++ make man mercurial meld curl
 
+echo '## Kernal header files for VirtualBox'
+sudo apt-get install linux-headers-$(uname -r)
 
 echo '## Install Ruby'
 curl -L https://get.rvm.io | bash -s stable
