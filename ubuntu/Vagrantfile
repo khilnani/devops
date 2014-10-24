@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  config.vm.define "ubuntu" do |ubuntu|
+    ubuntu.vm.provider "virtualbox" do |vb|
+        vb.gui = true
+    end
+    ubuntu.vm.box = "ubuntu-12"
+    ubuntu.vm.hostname = "ubuntu"
+    ubuntu.vm.network "forwarded_port", guest: 22, host: 1235
+    ubuntu.vm.box_url = "https://dl.dropboxusercontent.com/u/26568959/VagrantBoxes/Ubuntu-12.04.3-i386.box"
+#    ubuntu.vm.box_url = "http://files.vagrantup.com/precise32.box"
+    ubuntu.vm.provision "shell", path: "./setup-ubuntu.sh"
+  end
+  config.vm.synced_folder "./", "/host_data"
+
+end
