@@ -11,6 +11,11 @@ apt-get -y install software-properties-common python-software-properties python 
 echo '## Kernal header files for VirtualBox'
 sudo apt-get install linux-headers-$(uname -r)
 
+echo '## Virtual Box Guest Additions'
+sudo mount /dev/cdrom /mnt
+cd /mnt
+sudo ./VBoxLinuxAdditions.run
+
 echo '## Install Ruby'
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
