@@ -9,6 +9,10 @@ apt-get -y install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
 apt-get -y install software-properties-common python-software-properties python g++ make man mercurial meld curl
 apt-get -y install ubuntu-desktop
 
+echo '## Setup python'
+apt-get install python-setuptools
+easy_install pip
+
 echo '## Kernal header files for VirtualBox'
 sudo apt-get install linux-headers-$(uname -r)
 
