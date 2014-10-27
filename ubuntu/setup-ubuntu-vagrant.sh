@@ -10,8 +10,10 @@ apt-get -y install software-properties-common python-software-properties python 
 apt-get -y install ubuntu-desktop
 
 echo '## Setup python'
-apt-get install python-setuptools
+apt-get -y install python-dev
+apt-get -y install python-setuptools
 easy_install pip
+easy_install virtualenv
 
 echo '## Kernal header files for VirtualBox'
 sudo apt-get install linux-headers-$(uname -r)
