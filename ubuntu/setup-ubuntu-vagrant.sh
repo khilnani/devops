@@ -3,10 +3,11 @@
 echo '## Update'
 apt-get -y update
 
-echo '## Development libs'
+echo '## Install packages'
 apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
 apt-get -y install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev git-core
 apt-get -y install software-properties-common python-software-properties python g++ make man mercurial meld curl
+apt-get -y install ubuntu-desktop
 
 echo '## Kernal header files for VirtualBox'
 sudo apt-get install linux-headers-$(uname -r)
