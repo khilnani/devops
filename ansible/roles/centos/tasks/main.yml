@@ -15,7 +15,11 @@
   shell: yum -y install man ruby wget curl git-core gcc g++ make automake autoconf curl-devel openssl-devel zlib-devel apr-devel apr-util-devel sqlite-deve ruby-rdoc ruby-devel rubygems libselinux-python php-pear php-devel nc python-dev
 - name: Update gems
   shell: gem update --system
+- name: Install Bundler gem
+  shell: gem install bundler
 - name: Install Pip
   shell: easy_install pip 
 - name: Install virtualenv
   shell: pip install virtualenv
+
+
