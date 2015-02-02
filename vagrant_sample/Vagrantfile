@@ -32,6 +32,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
-  config.vm.synced_folder "./", "/host_data"
+  config.vm.synced_folder "./", "/host"
  
 end
