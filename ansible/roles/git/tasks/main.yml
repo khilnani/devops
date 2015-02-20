@@ -32,9 +32,3 @@
   git: repo={{ item.repo }} dest={{ item.dest }} update=yes
   with_items: git_projects
   when: git_projects is defined
-
-- name: Copy config for {{ item.dest }}
-  copy: src={{ item.src }} dest={{ item.dest }}
-  with_items: config_copy
-  when: config_copy is defined
-
