@@ -1,6 +1,6 @@
 ---
 - name: Install python27
-  shell: yum -y install python27 python27-devel python-setuptools sqlite sqlite-devel ncurses-devel
+  shell: yum -y install python27 python27-devel python-setuptools sqlite sqlite-devel ncurses-devel glibc-static
 - name: Install Pip
   shell: easy_install pip 
 - name: check python version
