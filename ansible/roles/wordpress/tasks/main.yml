@@ -1,7 +1,7 @@
 ---
 - name: Download wordpress
-  shell: cd /data && curl -O https://wordpress.org/latest.tar.gz
+  shell: cd /data && curl -O https://wordpress.org/wordpress-{{ wp_version }}.tar.gz
 - name: Unzip wordpress
-  shell: cd /data && tar -zxvf latest.tar.gz
+  shell: cd /data && tar -zxvf wordpress-{{ wp_version }}.tar.gz
 - name: Create symlink
   shell: ln -s /data/wordpress /var/www/html/wp
