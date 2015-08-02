@@ -1,6 +1,9 @@
 ---
 - name: Download wordpress
   shell: cd /data && curl -O https://wordpress.org/wordpress-{{ wp_version }}.tar.gz
+- name: Download Redis package
+  shell: rm -rf /data/wordpress
+  when: wp_delete|yes
 - name: Unzip wordpress
   shell: cd /data && tar -zxvf wordpress-{{ wp_version }}.tar.gz
 - name: Create symlink
