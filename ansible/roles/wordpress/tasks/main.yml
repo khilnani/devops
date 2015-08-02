@@ -4,6 +4,6 @@
 - name: Delete existing wordpress
   shell: rm -rf /data/wordpress && cd /data && ls -la
 - name: Unzip wordpress
-  shell: cd /data && tar -zxvf wordpress-{{ wp_version }}.tar.gz cd /data && ls -la
+  shell: cd /data && tar -zxvf wordpress-{{ wp_version }}.tar.gz && cd /data && ls -la
 - name: Create symlink
   shell: ln -s /data/wordpress /var/www/html/wp
