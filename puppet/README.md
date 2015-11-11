@@ -1,6 +1,6 @@
 
 
-# Install Puppet Server
+## Install Puppet Server
 
 - Security group
 ```
@@ -9,14 +9,19 @@ TCP 22 - To login to the server/instance using SSH
 TCP 80 - HTTP
 ```
 - `sudo hostname puppet`
-- `/etc/hosts` - `SLAVEIP  puppetslave`
+- `/etc/hosts`
+```
+MASTERIP    puppet.ec2.internal     puppet
+SLAVEIP     puppetslave.ec2.internal        puppetslave
+```
 - `sudo yum -y install puppet-server` - Install puppet server
 - `sudo chkconfig puppetmaster on` - Start on boot
 - `sudo service puppetmaster start` - Start
 - `puppet cert list` - List certs
+- `puppet cert sign puppetslave` - Sign slave agent
 
 
-@ Install Puppet Agent
+## Install Puppet Agent
 
 ```
 TCP 8140 - Agents will talk to the master on this port
@@ -24,9 +29,15 @@ TCP 22 - To login to the server/instance using SSH
 TCP 80 - HTTP
 ```
 - `sudo hostname puppetslave`
-- `/etc/hosts` - `MASTERIP  puppet`
+- `/etc/hosts`
+```
+MASTERIP    puppet.ec2.internal     puppet
+SLAVEIP     puppetslave.ec2.internal        puppetslave
+```
 - `sudo yum -y install puppet` - Install puppet agent
 - `sudo chkconfig puppet on` - Start on boot
 - `sudo service puppet start` - Start
+- `hostname -f` - fqdn adress
+- `hostname -i` - ip address
 - `sudo puppet agent --test` - Test connection to master
 - Edit `/etc/puppet/puppet.conf`
