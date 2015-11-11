@@ -13,8 +13,8 @@ TCP 80 - HTTP
 ```
 127.0.0.1   puppet ip-XXX-XX-X-XXX
 127.0.0.1   localhost   localhost.localdomain
-52.23.100.68    puppet.ec2.internal     puppet
-52.70.57.21     puppetslave.ec2.internal        puppetslave
+MASTERIP    puppet.ec2.internal     puppet
+SLAVEIP     puppetslave.ec2.internal        puppetslave
 ```
 - `/etc/init.d/network restart`
 - `sudo yum -y install puppet-server` - Install puppet server
@@ -36,8 +36,8 @@ TCP 80 - HTTP
 ```
 127.0.0.1   puppetslave ip-XXX-XX-X-XXX
 127.0.0.1   localhost   localhost.localdomain
-52.23.100.68    puppet.ec2.internal     puppet
-52.70.57.21     puppetslave.ec2.internal        puppetslave
+MASTERIP    puppet.ec2.internal     puppet
+SLAVEIP     puppetslave.ec2.internal        puppetslave
 ```
 - `/etc/init.d/network restart`
 - `sudo yum -y install puppet` - Install puppet agent
