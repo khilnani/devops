@@ -17,7 +17,7 @@
 
 On the master
 
-- Copy `manifests/site.pp` to `/etc/puppet/manifests/`
+- Copy `manifests/` and `modules/` to `/etc/puppet/manifests/` and `/etc/puppet/modules/`
 
 On the agent (or master)
 
