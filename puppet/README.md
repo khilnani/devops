@@ -23,7 +23,7 @@ On the agent (or master)
 
 - If Puppet daemon is running `sudo puppet agent -t --verbose`, 
   - Else `sudo puppet agent --server puppet` or `sudo puppet agent`
-- `vi /tmp/hello`
+- `more /tmp/hello` and `more /tmp/helloworld`
 
 
 ## Misc
