@@ -3,6 +3,7 @@
 - Docs - https://docs.puppetlabs.com/puppet/latest/reference/
 - Modules - https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html
 - Hiera - http://docs.puppetlabs.com/hiera/latest/
+- Hiera Src - https://github.com/puppetlabs/hiera
 
 ## Commands
 
