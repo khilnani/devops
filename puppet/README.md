@@ -6,12 +6,12 @@
 ## Commands
 
 - Apply
-- `sudo puppet apply --modulepath ./modules manifests/site.pp --verbose`
-Daemon
-- `sudo puppet agent -t --verbose`
-Standalone
-- `sudo puppet agent --verbose`
-- `sudo puppet agent --server puppet`
+  - `sudo puppet apply --modulepath ./modules manifests/site.pp --verbose`
+- Daemon
+  - `sudo puppet agent -t --verbose`
+- Standalone
+  - `sudo puppet agent --verbose`
+  - `sudo puppet agent --server puppet`
 
 ## Helloworld
 
