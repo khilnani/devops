@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cp ./manifests/* /etc/puppet/manifests/
+cp -r ./* /etc/puppet/
