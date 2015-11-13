@@ -9,7 +9,7 @@
   yum: name=* state=latest
 - name: Update Python Setup Tools
   yum: name=python-setuptools state=latest
-- name: Install Development Tools
+- name: Install Development Tools # yum groupinstall 'Development Tools'
   yum: name="@Development Tools" state=latest
 - name: Install Common Development packages
   shell: yum -y install man ruby wget curl git-core gcc g++ make automake autoconf curl-devel openssl-devel zlib-devel apr-devel apr-util-devel sqlite-deve ruby-rdoc ruby-devel rubygems libselinux-python php-pear php-devel nc python-dev ncurses-devel glibc-static
