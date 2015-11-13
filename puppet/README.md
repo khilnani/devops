@@ -59,6 +59,17 @@ On the agent (or master)
   - Else `sudo puppet agent --server puppet` or `sudo puppet agent`
 - `vi /tmp/hello`
 
+## Commands
+
+- Apply
+- `sudo puppet apply --modulepath ./modules manifests/site.pp --verbose`
+Daemon
+- `sudo puppet agent -t --verbose`
+Standalone
+- `sudo puppet agent --verbose`
+- `sudo puppet agent --server puppet`
+
+
 ## Misc
 
 - Edit `/etc/puppet/puppet.conf`
