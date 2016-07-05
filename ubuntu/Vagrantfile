@@ -9,6 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "ubuntu" do |ubuntu|
     ubuntu.vm.provider "virtualbox" do |vb|
         vb.gui = true
+        # vb.customize ["modifyvm", :id, "--memory", "1024"]
     end
     ubuntu.vm.box = "ubuntu/trusty64
     ubuntu.vm.hostname = "ubuntu"
