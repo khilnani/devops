@@ -17,5 +17,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ubuntu.vm.provision "shell", path: "./provision-ubuntu.sh"
   end
   config.vm.synced_folder "./", "/vagrant"
-
 end
