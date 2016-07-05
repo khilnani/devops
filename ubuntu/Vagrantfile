@@ -10,13 +10,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ubuntu.vm.provider "virtualbox" do |vb|
         vb.gui = true
     end
-    ubuntu.vm.box = "ubuntu-12"
+    ubuntu.vm.box = "ubuntu/trusty64
     ubuntu.vm.hostname = "ubuntu"
     ubuntu.vm.network "forwarded_port", guest: 22, host: 1235
-    ubuntu.vm.box_url = "https://dl.dropboxusercontent.com/u/26568959/VagrantBoxes/Ubuntu-12.04.3-i386.box"
-    # ubuntu.vm.box_url = "http://files.vagrantup.com/precise32.box"
     ubuntu.vm.provision "shell", path: "./setup-ubuntu-vagrant.sh"
   end
-  # config.vm.synced_folder "./", "/host_data"
+  config.vm.synced_folder "./", "/vagrant"
 
 end
