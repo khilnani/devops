@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vb.gui = true
         # vb.customize ["modifyvm", :id, "--memory", "1024"]
     end
-    ubuntu.vm.box = "ubuntu/trusty64
+    ubuntu.vm.box = "ubuntu/trusty64"
     ubuntu.vm.hostname = "ubuntu"
     ubuntu.vm.network "forwarded_port", guest: 22, host: 1235
     ubuntu.vm.provision "shell", path: "./provision-ubuntu.sh"
