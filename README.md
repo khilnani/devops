@@ -17,6 +17,8 @@ Each directory has it's own Readme with additional details.
   - Installer script fo Mac OS X and Linux/CentOS
   - Ansible playbook with reuseable roles for centos, nodejs, httpd, mongodb, mysql, redis, memcached, git etc.
   - Contains a test Vagrant setup for testing. Simply run `vagrant up` in the directory.
+- **scripts/**
+  - Ubuntu install scripts not yet migrated to Ansible. Bash is better?
 - **automation/**
   - PhantomJS based UI automation framework.
 - **chromebook/**
