@@ -21,5 +21,6 @@ apt-get -y install util-vserver
 echo '## Setup python'
 apt-get -y install python-dev
 apt-get -y install python-setuptools
+#apt-get -y install python-pip
 easy_install pip
 easy_install virtualenv
