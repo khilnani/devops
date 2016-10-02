@@ -1,2 +1,1 @@
-Ubuntu scripts that have not been converted to ansible due to laziness.
-But, sometimes bash is just as good.
+Ubuntu install scripts not yet migrated to Ansible. Bash is better?
