@@ -4,6 +4,8 @@ export RVM_VERSION=2.1.2
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
+export DOCKER_VERSION=0.7.0
+
 export SCALA_VERSION=2.11.8
 export SCALA_INSTALL_DIR=/usr/local/src/scala
 export SCALA_HOME=$SCALA_INSTALL_DIR/scala-$SCALA_VERSION
