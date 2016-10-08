@@ -24,3 +24,6 @@ apt-get -y install python-setuptools --upgrade
 #apt-get -y install python-pip
 easy_install pip
 easy_install virtualenv
+
+# aws cli
+pip install awscli --upgrade
