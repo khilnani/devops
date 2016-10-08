@@ -5,8 +5,9 @@
   tasks:
     - name: Get OS Release Info
       shell: cat /etc/*-release
+    # http://blog.zwiegnet.com/linux-server/disable-selinux-centos-7/
     - name: Change SELinux Policy
-      shell: echo 0 >/selinux/enforce
+      shell: sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
     - name: Install python-selinux
       yum: name=libselinux-python state=latest
     - name: Update system

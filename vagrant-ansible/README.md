@@ -2,6 +2,7 @@
 
 - Install
   - Vagrant - http://www.vagrantup.com/
+    - For Centos folder mounts, run: ` vagrant plugin install vagrant-vbguest`
   - Virtualbox - https://www.virtualbox.org/
   - Ansible - http://docs.ansible.com/intro_installation.html
 - Download this directory 
