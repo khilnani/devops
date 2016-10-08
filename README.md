@@ -15,7 +15,7 @@ Each directory has it's own Readme with additional details.
   - Ansible playbook with reuseable roles for centos, nodejs, httpd, mongodb, mysql, redis, memcached, git etc.
   - Contains a test Vagrant setup for testing. Simply run `vagrant up` in the directory.
 - **vagrant-ansible/**
-  - A sample setup of Vagrant and Ansible to setup a CentOS 7 and Ubuntu 14S
+  - A sample setup of Vagrant and Ansible to setup a CentOS 7 and Ubuntu 14
 - **scripts/**
   - Ubuntu install scripts not yet migrated to Ansible. Bash is better?
 - **automation/**
