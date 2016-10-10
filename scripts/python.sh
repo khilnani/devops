@@ -6,6 +6,8 @@ pip install ndg-httpsclient --upgrade
 #pip install pyopenssl ndg-httpsclient pyasn1 --upgrade
 pip install requests[security] --upgrade
 
+pip install awscli --upgrade
+
 pip install virtualenvwrapper --upgrade
 
 if grep -q "WORKON_HOME" ~/.bashrc; then
