@@ -34,7 +34,6 @@ numpy
 pandas
 pika
 Pillow
-psycopg2
 pysqlite
 python-dateutil
 python-memcached
