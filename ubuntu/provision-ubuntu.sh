@@ -27,8 +27,8 @@ echo '## Install Ruby'
 curl -L https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
-rvm install 2.1.2
-rvm use 2.1.2 --default
+rvm install 2.3
+rvm use 2.3 --default
 ruby -v
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
