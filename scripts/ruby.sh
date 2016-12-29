@@ -1,5 +1,6 @@
 #!/bin/bash -x
 
+export RVM_VERSION=2.3
 
 echo '## Install Ruby'
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
