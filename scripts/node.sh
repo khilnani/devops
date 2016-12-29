@@ -8,3 +8,5 @@ source ~/.bashrc
 nvm install node
 nvm use node
 nvm alias default node
+
+node -v
