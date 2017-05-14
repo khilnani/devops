@@ -13,10 +13,13 @@ mv go /usr/local
 mkdir -p $GOPATH
 
 echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
-echo 'export GOPATH=`$GOPATH`' >> ~/.bashrc
+echo 'export GOPATH=$GOPATH' >> ~/.bashrc
 echo 'export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin' >> ~/.bashrc
 
 source ~/.bashrc
 
 go version
 go env
+
+go get golang.org/x/tour/gotour
+echo "gotour Installed, run: gotour"

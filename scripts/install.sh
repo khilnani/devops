@@ -9,6 +9,7 @@ cd .
 #./git.sh # NAME EMAIL
 #./ssl.sh # EMAIL DOMAIN
 #./docker.sh
+#./powershell.sh
 #./go.sh
 #./rust.sh
 #./elixir.sh
