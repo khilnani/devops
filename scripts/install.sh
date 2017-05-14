@@ -8,6 +8,10 @@ cd .
 #./ubuntu.sh
 #./git.sh # NAME EMAIL
 #./ssl.sh # EMAIL DOMAIN
+#./docker.sh
+#./go.sh
+#./rust.sh
+#./elixir.sh
 #./ruby.sh
 #./java.sh
 #./scala.sh
