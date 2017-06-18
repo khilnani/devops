@@ -7,6 +7,10 @@
     - CMD: Use `%CD%` for working directory
     - PowerShell: Use `$PWD` like on Linux
 
+## Bash
+
+- `~/.bashrc` - `PS1='[\u@\h \W]\$ '`
+
 ## Links
 
 - https://hub.docker.com/u/khilnani/
