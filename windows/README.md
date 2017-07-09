@@ -9,7 +9,9 @@
 
 ## Bash
 
-- `~/.bashrc` - `PS1='[\u@\h \W]\$ '`
+- Change prompt - `~/.bashrc` - `PS1='[\u@\h \W]\$ '`
+- Remove console beep - `sudo vi /etc/inputrc` - add `set bell-style none`
+    - See https://github.com/Microsoft/BashOnWindows/issues/715#issuecomment-238010146
 
 ## Links
 
