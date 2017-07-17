@@ -13,6 +13,14 @@
 - Remove console beep - `sudo vi /etc/inputrc` - add `set bell-style none`
     - See https://github.com/Microsoft/BashOnWindows/issues/715#issuecomment-238010146
 
+## Display auto-brightness
+
+- Launch `regedit`
+- Search for `"FeatureTestControl"=dword:00009240`
+    - Replace 9240 with 9250 and reboot.
+    - Example: `Computer\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001`
+
 ## Links
 
 - https://hub.docker.com/u/khilnani/
+- https://forums.windowscentral.com/microsoft-surface-book/416121-auto-brightness-off-screen-still-dims.html
