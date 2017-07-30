@@ -11,3 +11,7 @@ rvm install $RVM_VERSION
 rvm use $RVM_VERSION --default
 ruby -v
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+
+gem update
+gem update --system
+gem install bundler
