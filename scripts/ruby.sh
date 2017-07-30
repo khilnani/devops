@@ -14,4 +14,4 @@ echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 gem update
 gem update --system
-gem install bundler
+gem install jekyll bundler
