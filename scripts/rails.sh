@@ -1,5 +1,5 @@
 #!/bin/sh -x
 
-sudo gem update
-sudo gem update --system
-sudo gem install rails -V
+gem update
+gem update --system
+gem install rails -V
