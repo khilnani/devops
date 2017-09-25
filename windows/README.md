@@ -7,6 +7,18 @@
     - CMD: Use `%CD%` for working directory
     - PowerShell: Use `$PWD` like on Linux
 
+## Git for Windows
+
+> When using the Git for Windows Shell / MinTTY.
+
+- Use `.bash_profile ` with below to use general `/bashrc` files
+```
+if [ -f ~/.bashrc ]
+then
+    . ~/.bashrc
+fi
+```
+
 ## Bash
 
 - Change prompt - `~/.bashrc` - `PS1='[\u@\h \W]\$ '`
