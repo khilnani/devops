@@ -12,3 +12,8 @@ Ubuntu install scripts not yet migrated to Ansible. Bash is better?
     - Shared Drives > Enable C Drive as shared
        - CMD: Use `%CD%` for working directory
        - PowerShell: Use `$PWD` like on Linux
+
+## Links
+
+- AWS AMI - MFA - https://aws.amazon.com/blogs/startups/securing-ssh-to-amazon-ec2-linux-hosts/
+- Ubuntu MFA - https://www.digitalocean.com/community/tutorials/how-to-set-up-multi-factor-authentication-for-ssh-on-ubuntu-16-04
