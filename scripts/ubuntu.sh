@@ -31,3 +31,6 @@ apt-get install mercurial --upgrade
 # aws cli
 pip install awscli --upgrade
 pip install botocore boto3 --upgrade
+
+# two factor - run: google-authenticator
+apt-get -y install libpam-google-authenticator
