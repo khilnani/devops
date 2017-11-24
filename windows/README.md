@@ -23,6 +23,14 @@ fi
 
 - Copy `rsync.exe` to `C:\Program Files\Git\usr\bin` 
 
+
+## NodeJS & NVM
+
+- WIndows - https://github.com/coreybutler/nvm-windows
+- Ubuntu - https://github.com/creationix/nvm
+
+
+
 ## Bash
 
 - Change prompt - `~/.bashrc` - `PS1='[\u@\h \W]\$ '`
