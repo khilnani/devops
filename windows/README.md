@@ -19,6 +19,10 @@ then
 fi
 ```
 
+> rsync support based on https://blog.tiger-workshop.com/add-rsync-to-git-bash-for-windows/
+
+- Copy `rsync.exe` to `C:\Program Files\Git\usr\bin` 
+
 ## Bash
 
 - Change prompt - `~/.bashrc` - `PS1='[\u@\h \W]\$ '`
