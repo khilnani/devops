@@ -1,5 +1,7 @@
 #!/bin/bash -x
 
+export GOVERSION=1.9
+
 export RVM_VERSION=2.1.2
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle

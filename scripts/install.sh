@@ -1,16 +1,15 @@
 #!/bin/sh -x
 
-pushd .
-cd .
 
-#./exports.sh
+./exports.sh
 #./exports-write.sh
-#./ubuntu.sh
+./ubuntu.sh
 #./git.sh # NAME EMAIL
 #./ssl.sh # EMAIL DOMAIN
-#./docker.sh
+./docker.sh
 #./powershell.sh
-#./go.sh
+./node.sh
+./go.sh
 #./rust.sh
 #./elixir.sh
 #./ruby.sh
@@ -22,9 +21,8 @@ cd .
 #./hadoop.sh
 #./spark.sh
 #./anaconda.sh
-#./python.sh
+./python.sh
 #./tensorflow.sh
 #./spark-ipython.sh
 #./nginx-passwd.sh # USER
 
-popd

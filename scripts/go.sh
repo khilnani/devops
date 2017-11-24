@@ -1,6 +1,5 @@
 #!/bin/sh -x
 
-export GOVERSION=1.8
 echo "GOVERSION: $GOVERSION"
 #export GOPATH=`pwd`
 export GOPATH=$HOME/go-work
