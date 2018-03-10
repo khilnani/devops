@@ -2,6 +2,11 @@ Ubuntu install scripts not yet migrated to Ansible. Bash is better?
 
 ## Notes
 
+### MOSH
+
+- Open a UDP type
+- Port Range 60000 - 61000
+
 ### Docker / Windows
 
 - Start native Docker daemon in Windows
