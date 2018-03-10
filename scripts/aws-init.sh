@@ -1,6 +1,6 @@
 #!/bin/sh -x
 
-sudo apt-get -y install git-core
+sudo apt-get -y install git-core mosh
 
 sudo mkdir /data
 sudo mkdir /data/git
