@@ -35,3 +35,12 @@ pip install botocore boto3 --upgrade
 
 # two factor - run: google-authenticator
 apt-get -y install libpam-google-authenticator
+
+# vim 8
+add-apt-repository ppa:jonathonf/vim
+
+apt -y update
+apt -y install vim
+
+
+
