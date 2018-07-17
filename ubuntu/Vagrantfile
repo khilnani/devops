@@ -16,5 +16,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #ubuntu.vm.network "forwarded_port", guest: 22, host: 1235
     ubuntu.vm.provision "shell", path: "./provision-ubuntu.sh"
   end
-  #config.vm.synced_folder ".", "/vagrant", type: "smb"
+  config.vm.synced_folder ".", "/vagrant", type: "smb", disabled: true
 end
