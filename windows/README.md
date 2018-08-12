@@ -1,15 +1,8 @@
-## docker
-
-- General > Enable: Expose daemon on tcp://localhost:2375 without TLS
-    - Append host on each command. eg: `docker -H tcp://0.0.0.0:2375 images`
-    - Or, update `~/.bashrc` with: `export DOCKER_HOST='tcp://0.0.0.0:2375'`
-- Shared Drives > Enable C Drive as shared
-    - CMD: Use `%CD%` for working directory
-    - PowerShell: Use `$PWD` like on Linux
-
 ## Git for Windows
 
-> When using the Git for Windows Shell / MinTTY.
+> Don't forget to add to your PATH - `C:\Program Files\Git\bin` - to use `bash` from the Console
+
+When using the Git for Windows Shell / MinTTY.
 
 - Use `.bash_profile ` with below to use general `/bashrc` files
 ```
@@ -23,10 +16,30 @@ fi
 
 - Copy `rsync.exe` to `C:\Program Files\Git\usr\bin` 
 
+## docker
+
+- General > Enable: Expose daemon on tcp://localhost:2375 without TLS
+    - Append host on each command. eg: `docker -H tcp://0.0.0.0:2375 images`
+    - Or, update `~/.bashrc` with: `export DOCKER_HOST='tcp://0.0.0.0:2375'`
+- Shared Drives > Enable C Drive as shared
+    - CMD: Use `%CD%` for working directory
+    - PowerShell: Use `$PWD` like on Linux
+
+## Python
+
+> Don't forget to add to your PATH - `C:\Python27`
+
+
+Install one of the below
+ 
+- Python - https://www.python.org/downloads/windows/
+- Anaconda - https://www.anaconda.com/download/
+
 
 ## NodeJS & NVM
 
-- WIndows - https://github.com/coreybutler/nvm-windows
+- Windows - https://github.com/coreybutler/nvm-windows
+    - https://github.com/coreybutler/nvm-windows/releases
 - Ubuntu - https://github.com/creationix/nvm
 
 ## SSH
