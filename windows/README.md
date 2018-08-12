@@ -16,8 +16,9 @@ fi
 
 - Copy `rsync.exe` to `C:\Program Files\Git\usr\bin` 
 
-## docker
+## Docker
 
+- Download from https://store.docker.com/editions/community/docker-ce-desktop-windows
 - General > Enable: Expose daemon on tcp://localhost:2375 without TLS
     - Append host on each command. eg: `docker -H tcp://0.0.0.0:2375 images`
     - Or, update `~/.bashrc` with: `export DOCKER_HOST='tcp://0.0.0.0:2375'`
