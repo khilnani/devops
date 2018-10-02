@@ -72,6 +72,32 @@ Install one of the below
 - Search for `"FeatureTestControl"=dword:00009240`
     - Replace 9240 with 9250 and reboot.
     - Example: `Computer\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001`
+    
+## PATH
+
+Windows `PATH` That includes Docker, Git, node.js/npm, SSH, Anaconda, Android, Android JRE, Vagrant, VS COde, and Ruby
+
+```
+C:\Program Files\Docker\Docker\Resources\bin;
+C:\WINDOWS\system32;
+C:\WINDOWS;
+C:\WINDOWS\System32\Wbem;
+C:\WINDOWS\System32\WindowsPowerShell\v1.0\;
+C:\Program Files\Microsoft VS Code\bin;
+C:\Program Files\Git\cmd;
+C:\Program Files\nodejs\;
+C:\WINDOWS\System32\OpenSSH\;
+C:\ProgramData\Anaconda2;
+C:\ProgramData\Anaconda2\Scripts;
+C:\HashiCorp\Vagrant\bin;
+C:\Users\nikkh\AppData\Local\Android\Sdk\platform-tools;
+C:\Users\nikkh\AppData\Local\Android\Sdk\tools\bin;
+C:\Users\nikkh\AppData\Local\Android\Sdk\emulator;
+C:\Program Files\Android\Android Studio\jre\bin;
+C:\Ruby25-x64\bin;
+C:\Users\nikkh\AppData\Local\Microsoft\WindowsApps;
+C:\Users\nikkh\AppData\Roaming\npm
+```
 
 ## Links
 
