@@ -25,6 +25,21 @@ fi
 - Shared Drives > Enable C Drive as shared
     - CMD: Use `%CD%` for working directory
     - PowerShell: Use `$PWD` like on Linux
+- Enable H-visor
+    - Powershell: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All`
+    - https://stackoverflow.com/questions/39684974/docker-for-windows-error-hardware-assisted-virtualization-and-data-execution-p
+        - Powershell: `dism.exe /Online /Enable-Feature:Microsoft-Hyper-V /All`
+        - Powershell: `bcdedit /set hypervisorlaunchtype auto`
+- Sharing Issues
+    - https://docs.docker.com/docker-for-windows/#firewall-rules-for-shared-drives
+    - Powershell: `Set-NetConnectionProfile -interfacealias "vEthernet (DockerNAT)" -NetworkCategory Private`
+- Test Commands
+    - https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10
+    - CMD: `docker run -v %cd%:/data/git -w /data/git --rm -it ubuntu ls -la`
+    - Powershell: ``docker run -v ${PWD}:/data/git -w /data/git --rm -it ubuntu ls -la`
+    - Powershell / Unix: `docker run -v ${pwd}:/data/git -w /data/git --rm -it ubuntu ls -la`
+    - Powershell / Unix: `docker run -v ${pwd}:/data/git --rm -it ubuntu ls -la /data/git`
+
 
 ## Python
 
