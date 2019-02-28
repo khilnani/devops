@@ -4,35 +4,47 @@ echo '## Update'
 apt-get -y update
 
 echo '## Install packages'
-apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
-apt-get -y install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev git-core
-apt-get -y install software-properties-common python-software-properties python g++ make man mercurial meld curl
+apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties --upgrade
+apt-get -y install libgdbm-dev libncurses5-dev automake libtool bison ed gawk libc6-dev libffi-dev git-core --upgrade
+apt-get -y install software-properties-common python-software-properties python gcc g++ make man curl unzip --upgrade
+apt-get -y install python3-pip python3-dev python3-setuptools --upgrade
+apt-get -y install apache2-utils dnsutils wget --upgrade
+apt-get -y install supervisor nginx --upgrade
+apt-get -y install mosh --upgrade
+# Jupyter libSM.so.6 error
+apt-get -y install libsm6 libxrender1 libfontconfig1 --upgrade 
+# xgboost plots
+apt-get -y install graphviz --upgrade
+# htop
+apt-get -y install htop --upgrade
+# vtop
+apt-get -y install util-vserver --upgrade
 
 echo '## Setup python'
-apt-get -y install python-dev
-apt-get -y install python-setuptools
+apt-get -y install python-dev --upgrade
+apt-get -y install python-setuptools --upgrade
 apt-get -y install python3.4-venv
+#apt-get -y install python-pip
 easy_install pip
 easy_install virtualenv
+easy_install3 pip
+pip3 install virtualenv
 
+# go
+apt-get install mercurial --upgrade
+
+# aws cli
 pip install awscli --upgrade
 pip install botocore boto3 --upgrade
-pip install google-cloud-texttospeech --upgrade
-pip install requests==2.6.0
-pip install nltk --upgrade
-pip install newspaper --upgrade
-pip install numpy --upgrade
-pip install sumy --upgrade
 
-echo '## Setup Node'
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+# two factor - run: google-authenticator
+apt-get -y install libpam-google-authenticator
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-nvm install 8.10.0
-npm install -g serverless
+# vim 8
+add-apt-repository ppa:jonathonf/vim
 
-#curl -O https://repo.anaconda.com/archive/Anaconda2-5.2.0-Linux-x86_64.sh
-#bash Anaconda3-5.2.0-Linux-x86_64.sh
+apt -y update
+apt -y install vim
+
+
 
