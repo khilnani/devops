@@ -11,6 +11,7 @@ apt-get -y install software-properties-common python-software-properties python 
 echo '## Setup python'
 apt-get -y install python-dev
 apt-get -y install python-setuptools
+apt-get -y install python3.4-venv
 easy_install pip
 easy_install virtualenv
 
