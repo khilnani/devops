@@ -22,6 +22,7 @@ apt-get -y install util-vserver --upgrade
 echo '## Setup python'
 apt-get -y install python-dev --upgrade
 apt-get -y install python-setuptools --upgrade
+apt-get -y install python3.4-venv
 #apt-get -y install python-pip
 easy_install pip
 easy_install virtualenv
