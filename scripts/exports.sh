@@ -33,7 +33,7 @@ export SPARK_HOME=$SPARK_INSTALL_DIR/$SPARK_FILE
 export TF_FILE_VERSION=0.9.0-cp27-none-linux_x86_64
 export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-$TF_FILE_VERSION.whl
 
-export ANACONDA_VERSION=4.1.0
-export ANACONDA_HOME=/opt/anaconda2
+export ANACONDA_VERSION=2018.12
+export ANACONDA_HOME=/opt/anaconda3
 
 export LETSENCRYPT_HOME=/opt/letsencrypt
