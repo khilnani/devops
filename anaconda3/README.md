@@ -52,3 +52,18 @@ Identical Envs
 - `pip3 install virtualenv`
 - `python3 -m venv env` OR `virtualenv -p python3.4 env`
 - `source ./env/activate
+
+# Jupyter
+
+- `./jupyter-config.sh`
+- Edit: `~/.jupyter/jupyter_notebook_config.py`
+```
+c.NotebookApp.ip = '0.0.0.0'
+c.NotebookApp.open_browser = False
+# from notebook.auth import passwd; passwd()
+c.NotebookApp.password = u'sha1:??:??'
+c.NotebookApp.port = 8888
+c.FileContentsManager.root_dir = u'/home/ubuntu/BASE_DIR'
+```
+- `jupyter notebook`
+
