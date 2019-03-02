@@ -20,3 +20,4 @@ SQLAlchemy
 gevent
 libgcc
 pygraphviz
+virtualenv
