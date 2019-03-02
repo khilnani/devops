@@ -1,0 +1,6 @@
+tensorflow
+ggplot
+keras
+spacy
+newspaper3k
+arrow
