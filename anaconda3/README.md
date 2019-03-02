@@ -51,7 +51,7 @@ Identical Envs
 - `easy_install3 pip`
 - `pip3 install virtualenv`
 - `python3 -m venv env` OR `virtualenv -p python3.4 env`
-- `source ./env/activate
+- `source ./env/activate`
 
 # Jupyter
 
