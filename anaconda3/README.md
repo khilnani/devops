@@ -55,6 +55,10 @@ Identical Envs
 
 # Jupyter
 
+- `./jupyter-start.sh`
+
+OR
+
 - `./jupyter-config.sh`
 - Edit: `~/.jupyter/jupyter_notebook_config.py`
 ```
@@ -65,5 +69,5 @@ c.NotebookApp.password = u'sha1:??:??'
 c.NotebookApp.port = 8888
 c.FileContentsManager.root_dir = u'/home/ubuntu/BASE_DIR'
 ```
-- `jupyter notebook`
+- `./jupter-config-start.sh` or`./jupyter-supervisor.sh`
 
