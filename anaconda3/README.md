@@ -1,10 +1,17 @@
 # Conda (Python3)
 
-- https://conda.io/docs/commands.html#conda-environment-commands
+> Use hvm-ssd/ubuntu-bionic-18.04-amd64-server-20180912 (ami-0ac019f4fcb7cb7e6)
+
+## Setup
+
+- `./ubuntu.sh`
+- `./anaconda3.sh`
+- `./conda.sh`
 
 ## Config
 
 - `conda config --add channels conda-forge`
+- `conda update --all`
 - `conda install --yes m2-base` - Unix tools in Windows
 
 ## Conda Environments

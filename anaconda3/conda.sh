@@ -1,5 +1,7 @@
 #!/bin/sh -x
 
+export PATH=/opt/anaconda3/bin:$PATH
+
 conda config --add channels conda-forge
 conda update --all
 
