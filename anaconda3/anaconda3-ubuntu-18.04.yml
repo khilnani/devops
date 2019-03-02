@@ -238,6 +238,8 @@ dependencies:
   - ptyprocess=0.6.0=py36_1000
   - py=1.8.0=py_0
   - py-lief=0.9.0=py36h7725739_2
+  - pyasn1=0.4.4=py_1
+  - pyasn1-modules=0.2.4=py_0
   - pycodestyle=2.5.0=py_0
   - pycosat=0.6.3=py36h14c3975_1001
   - pycparser=2.19=py_0
@@ -288,6 +290,7 @@ dependencies:
   - seaborn=0.9.0=py_0
   - secretstorage=3.1.1=py36_0
   - send2trash=1.5.0=py_0
+  - service_identity=17.0.0=py_0
   - setuptools=40.8.0=py36_0
   - simplegeneric=0.8.1=py_1
   - singledispatch=3.4.0.3=py36_1000
@@ -327,6 +330,7 @@ dependencies:
   - unicodecsv=0.14.1=py_1
   - unixodbc=2.3.7=h227dcee_1000
   - urllib3=1.24.1=py36_1000
+  - virtualenv=16.0.0=py36_1000
   - wcwidth=0.1.7=py_1
   - webencodings=0.5.1=py_1
   - werkzeug=0.14.1=py_0
