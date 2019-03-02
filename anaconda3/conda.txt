@@ -19,3 +19,4 @@ requests-oauthlib
 SQLAlchemy
 gevent
 libgcc
+pygraphviz

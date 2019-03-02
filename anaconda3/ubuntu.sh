@@ -14,7 +14,7 @@ apt-get -y install mosh --upgrade
 # Jupyter libSM.so.6 error
 apt-get -y install libsm6 libxrender1 libfontconfig1 --upgrade 
 # xgboost plots
-apt-get -y install graphviz --upgrade
+apt-get -qq -y install graphviz libgraphviz-dev pkg-config --upgrade
 # htop
 apt-get -y install htop --upgrade
 # vtop
