@@ -7,8 +7,10 @@ All files are copyright their respective owners. My devops files are free to use
 
 Each directory has it's own Readme with additional details.
 
-- **android/** - Android Termux and Pydroid3 setup
-- **anaconda3/** - Anaconda setup on Ubuntu 18.04 with Jupyter and Supervisor
+- **android/**
+  - Android Termux and Pydroid3 setup
+- **anaconda3/** 
+  - Anaconda3 (py3) setup on Ubuntu 18.04 with Jupyter and Supervisor
 - **ansible/**
   - Installer script fo Mac OS X and Linux/CentOS
   - Ansible playbook with reuseable roles for centos, nodejs, httpd, mongodb, mysql, redis, memcached, git etc.
@@ -25,3 +27,5 @@ Each directory has it's own Readme with additional details.
   - Ubuntu install scripts not yet migrated to Ansible. Bash is better?
 - **vagrant-ansible/**
   - A sample setup of Vagrant and Ansible to setup a CentOS 7 and Ubuntu 14
+- **windows/**
+  - Windows 10 Pro setup for Docker, Bash, Ubuntu etc.
