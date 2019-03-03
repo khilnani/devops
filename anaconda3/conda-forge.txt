@@ -5,3 +5,6 @@ spacy
 newspaper3k
 arrow
 service_identity
+textblob
+pyasn1-modules
+tweepy
