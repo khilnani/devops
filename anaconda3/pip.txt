@@ -1,3 +1,5 @@
+feedparser
+folium
 rasa_nlu
 rasa_core
 sklearn_crfsuite
