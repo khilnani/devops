@@ -11,7 +11,6 @@ apt-get -y install python3-pip python3-dev python3-setuptools --upgrade
 apt-get -y install apache2-utils dnsutils wget vagrant --upgrade
 apt-get -y install supervisor nginx --upgrade
 apt-get -y install mosh --upgrade
-apt-get -y install docker-ce docker-ce-cli containerd.io --upgrade
 # Jupyter libSM.so.6 error
 apt-get -y install libsm6 libxrender1 libfontconfig1 --upgrade 
 # xgboost plots
@@ -47,5 +46,4 @@ add-apt-repository ppa:jonathonf/vim
 apt -y update
 apt -y install vim
 
-echo "sudo docker run hello-world"
 
