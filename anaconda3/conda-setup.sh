@@ -9,4 +9,4 @@ conda install --yes --file conda.txt
 conda install --yes --channel "conda-forge" --file conda-forge.txt
 pip -q install -r pip.txt
 
-
+python -m spacy download en
