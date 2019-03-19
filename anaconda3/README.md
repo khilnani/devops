@@ -1,3 +1,10 @@
+# Docker
+
+> On Windows 10 use Powershell in Admin mode
+
+- `docker-compose up -d`
+- `docker-compose-ssh.bat` or `docker-compose-ssh.sh`
+
 # Conda (Python3)
 
 > Use hvm-ssd/ubuntu-bionic-18.04
