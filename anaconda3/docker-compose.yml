@@ -1,0 +1,10 @@
+version: '3'
+services:
+  anaconda3:
+    container_name: anaconda3
+    image: continuumio/anaconda3
+    restart: always
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/data/git
