@@ -19,6 +19,13 @@ apt-get -qq -y install graphviz libgraphviz-dev pkg-config --upgrade
 apt-get -y install htop --upgrade
 # vtop
 apt-get -y install util-vserver --upgrade
+# time
+apt-get install -y ntp ntpdate
+echo "\#\!/bin/sh" > /etc/cron.daily/ntpdate
+echo "ntpdate ntp.ubuntu.com pool.ntp.org" >> /etc/cron.daily/ntpdate
+chmod 755 /etc/cron.daily/ntpdate
+
+
 
 echo '## Setup python'
 apt-get -y install python-dev --upgrade

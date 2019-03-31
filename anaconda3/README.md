@@ -1,5 +1,14 @@
 # Docker
 
+## Build
+
+- `docker build -t anaconda3 .`
+- `docker push anaconda3`
+- `VER=0.0.1 docker tag  khilnani/anaconda3:latest khilnani/anaconda3:$VER && docker push khilnani/anaconda3:$VER`
+- `docker run -t -i --name test_anaconda3 --privileged -v ${PWD}:/data/git --rm khilnani/anaconda3`
+
+## Run
+
 > On Windows 10 use Powershell in Admin mode
 
 - `docker-compose up -d`
@@ -11,9 +20,11 @@
 
 ## Setup
 
-- `./ubuntu.sh`
-- `./anaconda3.sh`
-- `./conda.sh`
+
+
+- `./ubuntu-setup.sh`
+- `./anaconda3-install.sh`
+- `./conda-setup.sh`
 
 ## Config
 
