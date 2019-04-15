@@ -11,6 +11,7 @@ apt-get -y install python3-pip python3-dev python3-setuptools --upgrade
 apt-get -y install apache2-utils dnsutils wget --upgrade
 apt-get -y install supervisor nginx --upgrade
 apt-get -y install mosh --upgrade
+apt-get -y install nodejs
 # Jupyter libSM.so.6 error
 apt-get -y install libsm6 libxrender1 libfontconfig1 --upgrade 
 # xgboost plots
