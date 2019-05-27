@@ -31,7 +31,7 @@ pip install numpy pandas nltk scipy scikit-learn spacy newspaper
 pip install matplotlib seaborn
 pip install jupyter
 
-npm install -g npx create-react-app jsonlint
+npm install -g create-react-app jsonlint
 
 echo 'alias vi="vim"' >> ~/.bashrc
 source ~/.bashrc
