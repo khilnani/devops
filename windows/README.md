@@ -1,3 +1,12 @@
+## Sounds
+
+- STOP THE BEEP
+    - Launch the Sound Mixer > Sound Control Panel > Sounds
+    - Set sounds for below to None
+        - Default Beep
+        - Critical Stop
+
+
 ## Git for Windows
 
 > Don't forget to add to your PATH - `C:\Program Files\Git\bin` - to use `bash` from the Console
@@ -14,7 +23,7 @@ fi
 
 > rsync support based on https://blog.tiger-workshop.com/add-rsync-to-git-bash-for-windows/
 
-- Copy `rsync.exe` to `C:\Program Files\Git\usr\bin` 
+- Copy `rsync.exe` to `C:\Program Files\Git\usr\bin`
 
 ## Docker
 
@@ -47,7 +56,7 @@ fi
 
 
 Install one of the below
- 
+
 - Python - https://www.python.org/downloads/windows/
 - Anaconda - https://www.anaconda.com/download/
 
@@ -87,7 +96,7 @@ Install one of the below
 - Search for `"FeatureTestControl"=dword:00009240`
     - Replace 9240 with 9250 and reboot.
     - Example: `Computer\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001`
-    
+
 ## PATH
 
 Windows `PATH` That includes Docker, Git, node.js/npm, SSH, Anaconda, Android, Android JRE, Vagrant, VS COde, and Ruby
