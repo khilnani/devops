@@ -81,7 +81,7 @@ pyparsing==2.3.0
 PySDL2==0.9.4
 python-dateutil==2.7.5
 pytz==2018.7
-PyYAML==3.13
+PyYAML==5.4
 pyzmq==17.0.0
 qtconsole==4.4.2
 readability-lxml==0.7
