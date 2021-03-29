@@ -75,7 +75,7 @@ ptyprocess==0.6.0
 pyasn1==0.4.4
 pyasn1-modules==0.2.2
 pygame-sdl2==2.1.0
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==1.8.4
 pyparsing==2.3.0
 PySDL2==0.9.4
