@@ -88,7 +88,7 @@ readability-lxml==0.7
 regex==2018.1.10
 requests==2.20.0
 requests-file==1.4.3
-rsa==4.0
+rsa==4.7
 s3transfer==0.1.13
 scikit-learn==0.20.dev0
 scipy==1.1.0
