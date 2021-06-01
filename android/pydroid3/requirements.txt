@@ -106,7 +106,7 @@ tornado==5.1.1
 tqdm==4.28.1
 traitlets==4.3.2
 ujson==2.0
-urllib3==1.24.1
+urllib3==1.26.5
 watson-developer-cloud==2.4.1
 wcwidth==0.1.7
 webencodings==0.5.1
