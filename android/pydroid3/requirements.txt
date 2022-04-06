@@ -58,7 +58,7 @@ nbconvert==5.4.0
 nbformat==4.4.0
 newspaper3k==0.2.8
 nltk==3.3
-notebook==5.7.0
+notebook==6.4.10
 numpy==1.15.4
 pandas==0.22.0
 pandocfilters==1.4.2
